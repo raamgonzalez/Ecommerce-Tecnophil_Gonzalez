@@ -1,0 +1,15 @@
+.counter{
+    color: rgb(136 19 55);
+    display: inline-block;
+    position: relative;
+    right: 25px;
+    top: 12px;
+}
+
+.counter>h3{
+    display: inline-block;
+    background-color: rgb(241 245 249);
+    line-height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}

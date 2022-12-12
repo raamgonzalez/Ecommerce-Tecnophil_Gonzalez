@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../NavBar/Title/Title'
+import Title from '../Title/Title.js'
 
 const ItemListContainer = () => {
     return (

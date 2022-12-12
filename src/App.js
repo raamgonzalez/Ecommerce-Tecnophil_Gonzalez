@@ -2,49 +2,69 @@ import './App.css';
 import Card from './components/Card/Card';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Layout from './components/Layout/Layout';
+import config from './config.json';
+import { useState, useEffect } from "react";
+import Spinner from './components/Spinner/Spinner';
+import Counter from './components/Counter/Counter';
 
-const cards = [
-	{
-		title: 'Apple Macbook Pro',	
-		description: 'This is a description of the product',
-		price: 340000,
-		img: "/media/appleMacbookPro.jpg",
-		alt: "Apple Macbook Pro",
-	},
-	{
-		title: 'Samsung TV 55"',
-		description: 'This is a description of the product',
-		price: 102000,
-		btnText: 'Oferta!',
-		img: "/media/samsungTV55.jpg",
-		alt: "Samsung TV 55",
-	},
-	{		
-		title: 'Celular Xiaomi 64GB',	
-		description: 'This is a description of the product',
-		price: 80000,
-		btnText: '',
-		img: "./media/celularXiaomi.jpg",
-		alt: ""
-	},
-]
+
 
 function App(props) {
+
+	const [cards, setCards] = useState([])
+	const [loading, setLoading] = useState(false)
+
+	const getCards = () =>{
+		setLoading(true)
+		const operacion = new Promise ((resolve, reject) => {
+			setTimeout(() => {
+				resolve({
+					status:200,
+					data:config.cards,
+				})
+			},3000)
+		})
+	
+		operacion.then((result, error) => {
+			setCards(result.data)
+		})
+		.catch((error) => {
+			console.log(error, "ERROR EN EL CATCH");
+			alert("Algo salío mal!")
+		})
+		.finally(() => {
+			setLoading(false)
+		})
+	}
+
+	useEffect(() => {
+		getCards()
+
+		return () => {
+			setCards([])
+		}
+	}, [])
+
+
 	return (
+		
 		<Layout className="App">
-			<main className="flex flex-row flex-wrap justify-around gap-4 mx-64 my-16">
-				{cards.map(({title, description, price, btnText, img, alt},index) => (
-				<Card
-				key={index}	
-				title={title} 
-				description={description} 
-				price={price}
-				//Solucionar import de imagenes
-				img={img}
-				alt={alt}
-				/>))}
-			
-			</main>
+			{cards.length < 1}
+			<section className="flex flex-row flex-wrap justify-around mx-64 my-16 h-full">
+				{loading && <Spinner/>}
+				{!loading && cards.length > 0 ? cards.map(({id, title, description, price, btnText, img, alt},index) => (
+					<Card
+					id={id}
+					key={index}	
+					title={title} 
+					description={description} 
+					price={price}
+					img={img}
+					alt={alt}
+					/>) 
+					) : !loading && cards.length < 1 && (<h1 className= "text-center text-red-800 text-xl">Ups!, fallo la carga de productos</h1>)
+				}
+			</section>
 			<ItemListContainer/>
 		</Layout>
 	);

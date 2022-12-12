@@ -1,13 +1,15 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar'
-import '../styles/Layout.css'
+import './Layout.css'
 
 const Layout = (props) => {
     const {children} = props
     return (
-        <main>
+        <main className='wrapper'>
             <NavBar/>
             {children}
+            <Footer/>
         </main>
     )
 }

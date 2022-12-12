@@ -1,0 +1,30 @@
+{
+    "cards" : [
+        {
+            "id": 1,
+            "title": "Apple Macbook Pro",	
+            "description": "This is a description of the product",
+            "price": 340000,
+            "img": "/img/appleMacbookPro.jpg",
+            "alt": "Apple Macbook Pro"
+        },
+        {
+            "id": 2,
+            "title": "Samsung TV 55",
+            "description": "This is a description of the product",
+            "price": 102000,
+            "btnText": "Oferta!",
+            "img": "/img/samsungTV55.jpg",
+            "alt": "Samsung TV 55"
+        },
+        {
+            "id": 3,
+            "title": "Celular Xiaomi 64GB",	
+            "description": "This is a description of the product",
+            "price": 80000,
+            "btnText": "",
+            "img": "/img/celularXiaomi.jpg",
+            "alt": "Celular Xiaomi"
+        }
+    ]
+}
