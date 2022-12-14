@@ -11,7 +11,6 @@ const Counter = (props) => {
         if(contador > 1){setContador(contador - 1)}
     }
 
-    console.log(contador)
 
     return (
         <div className='counter'>

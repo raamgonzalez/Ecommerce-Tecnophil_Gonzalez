@@ -13,18 +13,45 @@
             "title": "Samsung TV 55",
             "description": "This is a description of the product",
             "price": 102000,
-            "btnText": "Oferta!",
+            "offer": true,
             "img": "/img/samsungTV55.jpg",
-            "alt": "Samsung TV 55"
+            "alt": "Televisor Samsung TV 55"
         },
         {
             "id": 3,
             "title": "Celular Xiaomi 64GB",	
             "description": "This is a description of the product",
             "price": 80000,
-            "btnText": "",
+            "offer": "",
             "img": "/img/celularXiaomi.jpg",
             "alt": "Celular Xiaomi"
+        },
+        {
+            "id": 4,
+            "title": "Iphone 13Pro",	
+            "description": "This is a description of the product",
+            "price": 300000,
+            "offer": "",
+            "img": "/img/Iphone13Pro.jpg",
+            "alt": "Celular Iphone 13Pro"
+        },
+        {
+            "id": 5,
+            "title": "LG TV 75",	
+            "description": "This is a description of the product",
+            "price": 151300,
+            "offer": "",
+            "img": "/img/lgTV.jpg",
+            "alt": "Televisor LG TV 75"
+        },
+        {
+            "id": 6,
+            "title": "Notebook Asus i7",	
+            "description": "This is a description of the product",
+            "price": 257000,
+            "offer": true,
+            "img": "/img/notebookAsus.jpg",
+            "alt": "Notebook Asus i7"
         }
     ]
 }

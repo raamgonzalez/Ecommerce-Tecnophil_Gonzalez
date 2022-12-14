@@ -1,4 +1,6 @@
 
 .nav__cart{
     cursor: pointer;
+    display: flex;
+    align-items: baseline;
 }

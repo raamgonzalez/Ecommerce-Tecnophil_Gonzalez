@@ -4,8 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Layout from './components/Layout/Layout';
 import config from './config.json';
 import { useState, useEffect } from "react";
-import Spinner from './components/Spinner/Spinner';
-import Counter from './components/Counter/Counter';
+import Spinner from './components/UI/Spinner/Spinner';
 
 
 
@@ -29,7 +28,6 @@ function App(props) {
 			setCards(result.data)
 		})
 		.catch((error) => {
-			console.log(error, "ERROR EN EL CATCH");
 			alert("Algo salío mal!")
 		})
 		.finally(() => {
@@ -50,9 +48,9 @@ function App(props) {
 		
 		<Layout className="App">
 			{cards.length < 1}
-			<section className="flex flex-row flex-wrap justify-around mx-64 my-16 h-full">
+			<section className="flex flex-row flex-wrap justify-center mx-64 my-16 h-full gap-6">
 				{loading && <Spinner/>}
-				{!loading && cards.length > 0 ? cards.map(({id, title, description, price, btnText, img, alt},index) => (
+				{!loading && cards.length > 0 ? cards.map(({id, title, description, price, offer, img, alt},index) => (
 					<Card
 					id={id}
 					key={index}	
@@ -61,6 +59,7 @@ function App(props) {
 					price={price}
 					img={img}
 					alt={alt}
+					offer={offer}
 					/>) 
 					) : !loading && cards.length < 1 && (<h1 className= "text-center text-red-800 text-xl">Ups!, fallo la carga de productos</h1>)
 				}

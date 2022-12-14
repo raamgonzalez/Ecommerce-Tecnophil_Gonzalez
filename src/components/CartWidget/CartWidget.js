@@ -5,7 +5,9 @@ import Counter from '../Counter/Counter'
 
 const CartWidget = () => {
     return (
-        <FontAwesomeIcon className="nav__cart text-slate-100 text-xl px-4 py-2 rounded-lg ml-2" style = {{cursor:"pointer"}} icon={faCartShopping} />
+        <div className='flex flex-col items-baseline my-auto'>
+            <FontAwesomeIcon className="nav__cart text-slate-100 text-2xl px-4 py-2 rounded-lg ml-2" style = {{cursor:"pointer"}} icon={faCartShopping} />
+        </div>
         )
 }
 
