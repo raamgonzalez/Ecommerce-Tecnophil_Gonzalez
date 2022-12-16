@@ -2,9 +2,10 @@ import React from 'react'
 import Title from '../Title/Title.js'
 import { useEffect, useState } from 'react'
 import config from '../../config.json';
-import Layout from '../Layout/Layout.js';
 import Spinner from '../UI/Spinner/Spinner.js';
 import Card from '../Card/Card.js';
+import './ItemListContainer.css'
+import '../Layout/Layout.css'
 
 
 const ItemListContainer = () => {
@@ -43,9 +44,9 @@ const ItemListContainer = () => {
 	}, [])
 
     return (
-    <Layout className="App"> 
+    <div className="content__products"> 
         {cards.length < 1}
-        <section className="flex flex-row flex-wrap justify-center mx-64 my-16 h-full gap-6">
+        <section className="flex flex-row flex-wrap justify-center mx-64 my-16 gap-6">
             {loading && <Spinner/>}
             {!loading && cards.length > 0 ? cards.map(({id, title, description, price, offer, img, alt},index) => (
                 <Card
@@ -62,7 +63,7 @@ const ItemListContainer = () => {
             }
         </section>
         <Title greeting= 'Listado de productos'/>
-    </Layout>
+    </div>
 
     )
 }

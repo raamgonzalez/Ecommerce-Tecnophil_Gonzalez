@@ -13,9 +13,10 @@ const NavBar = () => {
 		</div>
 		<ul className="nav__list flex flex-row gap-4 my-auto" >
 			{/* <li className="nav__link text-slate-300 py-2 rounded-lg mr-32"><a href="#">Home</a></li> */}
-				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to=''>Moviles</NavLink></li>
-				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to=''>TV & AV</NavLink></li>
-				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to=''>Notebooks</NavLink></li>
+			{/*Agregar rutas faltantes de caterogias*/}
+				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to='/asds' activeClassName="active">Moviles</NavLink></li>
+				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to='/tvav' activeClassName="active">TV & AV</NavLink></li>
+				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to='/noteboks' activeClassName="active">Notebooks</NavLink></li>
 				<CartWidget/>
 			<Counter/>
 		</ul>
