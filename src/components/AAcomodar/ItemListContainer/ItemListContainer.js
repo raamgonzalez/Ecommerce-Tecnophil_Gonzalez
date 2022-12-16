@@ -1,9 +1,9 @@
 import React from 'react'
 import Title from '../Title/Title.js'
 import { useEffect, useState } from 'react'
-import config from '../../config.json';
+import config from '../../../config.json';
 import Layout from '../Layout/Layout.js';
-import Spinner from '../UI/Spinner/Spinner.js';
+import Spinner from '../../UI/Spinner/Spinner.js';
 import Card from '../Card/Card.js';
 
 
