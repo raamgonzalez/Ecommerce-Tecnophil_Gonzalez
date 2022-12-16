@@ -16,5 +16,6 @@
 }
 .slider-container{
     margin: 0 auto;
+    margin-top: 0.5rem;
     overflow-x: hidden;
 }

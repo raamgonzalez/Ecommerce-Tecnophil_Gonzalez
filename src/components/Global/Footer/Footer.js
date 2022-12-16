@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-    <footer className="footer p-4 mx-64 mt-2 border-t border-gray-400">
+    <footer className="foote p-4 mx-64 mt-2 border-t border-gray-400">
         <div className="flex flex-row justify-between">
             <div className='flex flex-col'>
                 <img src='../logo.svg' alt='Logo de tecnophill' className='w-22 h-12 self-start'></img>
