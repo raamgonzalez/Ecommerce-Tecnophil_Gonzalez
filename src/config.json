@@ -6,7 +6,8 @@
             "description": "This is a description of the product",
             "price": 340000,
             "img": "/img/appleMacbookPro.jpg",
-            "alt": "Apple Macbook Pro"
+            "alt": "Apple Macbook Pro",
+            "category": "notebooks"
         },
         {
             "id": 2,
@@ -15,7 +16,8 @@
             "price": 102000,
             "offer": true,
             "img": "/img/samsungTV55.jpg",
-            "alt": "Televisor Samsung TV 55"
+            "alt": "Televisor Samsung TV 55",
+            "category": "tv"
         },
         {
             "id": 3,
@@ -24,7 +26,8 @@
             "price": 80000,
             "offer": "",
             "img": "/img/celularXiaomi.jpg",
-            "alt": "Celular Xiaomi"
+            "alt": "Celular Xiaomi",
+            "category": "moviles"
         },
         {
             "id": 4,
@@ -33,7 +36,8 @@
             "price": 300000,
             "offer": "",
             "img": "/img/Iphone13Pro.jpg",
-            "alt": "Celular Iphone 13Pro"
+            "alt": "Celular Iphone 13Pro",
+            "category": "moviles"
         },
         {
             "id": 5,
@@ -42,7 +46,8 @@
             "price": 151300,
             "offer": "",
             "img": "/img/lgTV.jpg",
-            "alt": "Televisor LG TV 75"
+            "alt": "Televisor LG TV 75",
+            "category": "tv"
         },
         {
             "id": 6,
@@ -51,7 +56,8 @@
             "price": 257000,
             "offer": true,
             "img": "/img/notebookAsus.jpg",
-            "alt": "Notebook Asus i7"
+            "alt": "Notebook Asus i7",
+            "category": "notebooks"
         }
     ]
 }
