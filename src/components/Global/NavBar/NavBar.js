@@ -14,9 +14,9 @@ const NavBar = () => {
 		</div>
 		<ul className="nav__list flex flex-row gap-4 my-auto" >
 			{/* <li className="nav__link text-slate-300 py-2 rounded-lg mr-32"><a href="#">Home</a></li> */}
-				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to='/category/moviles'>Moviles</NavLink></li>
-				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to='/category/tv'>TV & AV</NavLink></li>
-				<li className="nav__link text-slate-300 py-2 rounded-lg text-lg"><NavLink to='/category/notebooks'>Notebooks</NavLink></li>
+				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/moviles'>Moviles</NavLink></li>
+				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/tv'>TV & AV</NavLink></li>
+				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/notebooks'>Notebooks</NavLink></li>
 				<CartWidget/>
 		</ul>
 	</nav>

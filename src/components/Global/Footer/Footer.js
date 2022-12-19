@@ -8,12 +8,12 @@ const Footer = () => {
         <div className="flex flex-row justify-between">
             <div className='flex flex-col'>
                 <img src='../logo.svg' alt='Logo de tecnophill' className='w-22 h-12 self-start'></img>
-                <h3 className="copyright__h3 text-slate-300">&copy; Derechos Reservados RaG</h3>
+                <h3 className="copyright__h3 text-neutral-100">&copy; Derechos Reservados RaG</h3>
             </div>
                 {/* Arreglar color de Red social */}
             <div className='flex flex-col justify-center gap-1'>
-                <a className='text-gray-300' href="https://www.instagram.com/reguluxlamps"><img className='w-6 h-7' src="../icons/icons8-instagram-90.svg" alt="Hola" /></a>
-                <a className='text-gray-300' href="https://www.instagram.com/reguluxlamps"><img className=' w-6 h-7' src="../icons/icons8-facebook-90.svg" alt="Hola" /></a>
+                <a className='text-neutral-100' href="https://www.instagram.com/reguluxlamps"><img className='w-6 h-7' src="../icons/icons8-instagram-90.svg" alt="Hola" /></a>
+                <a className='text-neutral-100' href="https://www.instagram.com/reguluxlamps"><img className=' w-6 h-7' src="../icons/icons8-facebook-90.svg" alt="Hola" /></a>
             </div>
         </div>
     </footer>

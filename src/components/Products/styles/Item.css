@@ -1,21 +1,45 @@
 .card{
     border-radius: 20px;
-    min-height: 29rem;
+    min-height: 30rem;
+    background-color:  #fffffe;
 }
 
 .box__card{
     margin: auto;
 }
 
+
+
 .box__card:hover{
-    scale: 1.02;
+    scale: 1.01;
+    transition: ease-in-out;
 }
 .card__image{
     border-radius: 50px 10px 50px 10px;
 }
 
-.btn_text{
+.text__offer{
+    color: #e53170;
+}
+
+.btn__cart{
+    padding: 0.5rem 0.7rem;
+
+
+    color: #fffffe;
+    font-weight: 500;
+    background-color: #ff8906;
     -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
     -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
     box-shadow: 5px 5px 9px -3px rgba(0,0,0,0.46);
+
+    border-radius: 7px;
+}
+
+.btn__cart--offer:hover{
+    background-color: rgb(172, 39, 39);
+}
+
+.btn__cart--nooffer:hover{
+    background-color: #e48111;
 }
