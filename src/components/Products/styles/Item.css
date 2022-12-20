@@ -1,0 +1,90 @@
+.card{
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    min-height: 30rem;
+    background-color:  #fffffe;
+}
+
+.box__card{
+    margin: auto;
+}
+
+.box__card:hover{
+    scale: 1.01;
+    transition: ease-in-out;
+}
+.card__image{
+    border-radius: 50px 10px 50px 10px;
+}
+
+.text__offer{
+    color: #e53170;
+}
+
+
+.btn__cart{
+    padding: 0.5rem 0.7rem;
+
+
+    color: #fffffe;
+    font-weight: 500;
+    background-color: #ff8906;
+    -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    box-shadow: 5px 5px 9px -3px rgba(0,0,0,0.46);
+
+    border-radius: 7px;
+}
+
+.btn__cart--offer:hover{
+    background-color: rgb(172, 39, 39);
+}
+
+.btn__cart--nooffer:hover{
+    background-color: #e48111;
+}
+
+.text__offer--price{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.text__offer--item{
+    margin-right: 1rem;
+    align-self: center;
+    color: #a7a9be;
+    font-size: small;
+    text-decoration: line-through;
+}
+
+.card__description{
+    margin: 0 auto;
+    place-items: center;
+}
+
+.card_footer{
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.card__header{
+    padding: 0;
+}
+
+
+.card__stock--container{
+    margin-top: 1rem;
+    width: 85%;
+    height: 24px;
+    margin: 0 auto;
+    border: 1px #a7a9be solid;
+    border-radius: 0.5rem;
+}
+
+.card__stock{
+    font-size: medium;
+    border-radius: 0 0 1rem 1rem;
+}
+
