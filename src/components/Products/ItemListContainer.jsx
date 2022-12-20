@@ -52,7 +52,7 @@ const ItemListContainer = () => {
         {cards.length < 1}
         <div className="products__container flex flex-row flex-wrap justify-center mx-96 my-16 h-full">
             {loading && <Spinner/>}
-            {!loading && cards.length > 0 ? filter.map(({id, title, description, price, offer, img, alt},index) => (
+            {!loading && cards.length > 0 ? filter.map(({id, title, description, price, offer, img, alt, stock},index) => (
                 <Item
                 id={id}
                 key={index}	
@@ -61,6 +61,7 @@ const ItemListContainer = () => {
                 price={price}
                 img={img}
                 alt={alt}
+				stock={stock}
                 offer={offer}
                 />) 
                 ) : !loading && cards.length < 1 && (<h1 className= "text-center text-red-800 text-xl">Ups!, fallo la carga de productos</h1>)

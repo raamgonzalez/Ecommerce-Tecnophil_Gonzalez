@@ -8,24 +8,22 @@ import ItemDetail from './ItemDetail'
 const ItemDetailContainer = () => {
 
     const {id} = useParams()
-    console.log(id)
-    const [cards, setCards] = useState([])
-    console.log(cards)
+    const [cardsdetail, setCardsDetail] = useState([])
 
 
 
-    const getCards = () =>{
+    const getCardsDetail = () =>{
 		const operacion = new Promise ((resolve) => {
 			setTimeout(() => {
 				resolve({
 					status:200,
 					data:config.cards,
 				})
-			},500)
+			},)
 		})
 	
 		operacion.then((result, error) => {
-			setCards(result.data)
+			setCardsDetail(result.data)
 		})
 		.catch((error) => {
 			alert("Algo salío mal!")
@@ -33,29 +31,33 @@ const ItemDetailContainer = () => {
 	}
 
 	useEffect(() => {
-		getCards()
+		getCardsDetail()
 
 		return () => {
-			setCards([])
+			setCardsDetail([])
 		}
-	}, [])
+	}, [id])
 
-    const filter = id? cards.filter((product) => product.id == id) : null
+    const filter = id? cardsdetail.filter((product) => product.id === Number(id)) : null
+
 
     return (
         <>
-            {filter.map(({id, title, descriptiondetail, category, price, offer, img, alt},index) => (
-                <ItemDetail
-                id={id}
-                key={index}	
-                title={title} 
-                descriptiondetail={descriptiondetail} 
-                price={price}
-                img={img}
-                alt={alt}
-                offer={offer}
-                category={category}
-                />
+            {filter.map(({id, title, description, descriptiondetail, category, price, offer, img, alt},index) => (
+                <div className='products_detail'>
+                    <ItemDetail
+                    id={id}
+                    key={index}	
+                    title={title} 
+                    descriptiondetail={descriptiondetail} 
+                    description={description}
+                    price={price}
+                    img={img}
+                    alt={alt}
+                    offer={offer}
+                    category={category}
+                    />
+                </div>
             ))}
 
         </>

@@ -4,8 +4,8 @@ import CartWidget from './components/Global/NavBar/CartWidget/CartWidget';
 import Error404 from './components/Global/PageNotFound/Error404';
 import Layout from './components/Global/Layout/Layout';
 import ItemListContainer from './components/Products/ItemListContainer';
-
 import ItemDetailContainer from './components/Products/ItemDetailContainer';
+
 
 
 
