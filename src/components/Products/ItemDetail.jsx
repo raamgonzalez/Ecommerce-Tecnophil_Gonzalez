@@ -4,7 +4,7 @@ import './styles/ItemDetail.css'
 
 const ItemDetail = (props) => {
 
-    const {id, title,description, descriptiondetail,category, price, img, alt, offer } = props
+    const { title,description, descriptiondetail,category, price, img, alt, offer } = props
 
     return (
 		<section className="detail__box flex">
@@ -25,8 +25,10 @@ const ItemDetail = (props) => {
 						<a className= {offer===true? 'btn__cart--detail btn__cart--offer hover:animate-bounce' : 'btn__cart--detail btn__cart--nooffer'}>
 							Agregar al Carrito
 						</a>
-						<div>
-							
+						<div className='main__counter counter'>
+							<button className='counter__button'> - </button>
+							<h4 className='counter__p'>1</h4>
+							<button className='counter__button'> + </button>
 						</div>
 					</div>
 				</ul>
