@@ -1,10 +1,10 @@
 import React from 'react'
-
 import './styles/ItemDetail.css'
 
-const ItemDetail = (props) => {
+const ItemDetail = (item) => {
 
-    const { title,description, descriptiondetail,category, price, img, alt, offer } = props
+	const { title,description, descriptiondetail,category, price, img, alt, offer } = item
+    // const { title,description, descriptiondetail,category, price, img, alt, offer } = props
 
     return (
 		<section className="detail__box flex">

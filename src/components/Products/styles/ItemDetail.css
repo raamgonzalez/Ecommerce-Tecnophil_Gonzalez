@@ -122,14 +122,14 @@
 .main__counter{
     margin: 0 auto;
     background-color: #ff8906;
-    width: 15rem;
+    width: 10rem;
     border-radius: 7px;
 
 
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5rem;
+    gap: 2.5rem;
     box-shadow: #965e1f 0px 3px 12px -2px, #ff8b062c 0px 3px 7px -3px;
 }
 
