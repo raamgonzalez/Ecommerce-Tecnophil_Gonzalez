@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import config from '../../config.json';
 import ItemDetail from './ItemDetail'
+import './styles/ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
 

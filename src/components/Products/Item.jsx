@@ -18,7 +18,7 @@ const { id, title, description, price, img, alt, stock, offer } = props;
 						<p className="card__description">{description}</p>
 					</div>
 					<div className="card_footer flex items-center justify-between">
-						<div className="flex flex-col">
+						<div className="flex flex-col gap-0">
 							<span className="text-xl font-bold text-slate-800"/>
 							<p className='text__offer--price'>ARS ${Math.round(price/1.10)}</p>
 						{offer===true? <p className="text__offer--item font-bold">ARS ${price}</p> : null}

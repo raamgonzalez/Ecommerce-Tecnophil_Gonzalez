@@ -24,7 +24,7 @@
 
 
 .btn__cart{
-    padding: 0.5rem 0.7rem;
+    padding: 0.8rem 0.rem;
 
 
     color: #fffffe;
@@ -52,8 +52,10 @@
 }
 
 .text__offer--item{
+    padding: 0;
+    display: inline-block;
     margin-right: 1rem;
-    align-self: center;
+    /* align-self: center; */
     color: #a7a9be;
     font-size: small;
     text-decoration: line-through;
@@ -75,7 +77,6 @@
 
 
 .card__stock--container{
-    margin-top: 1rem;
     width: 85%;
     height: 24px;
     margin: 0 auto;
