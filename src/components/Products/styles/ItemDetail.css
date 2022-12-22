@@ -82,7 +82,7 @@
 }
 
 .btn__cart--detail{
-    padding: 0.5rem 0.7rem;
+    padding: 0.1rem 2rem;
     display: inline-block;
 
     font-weight: bold;
@@ -116,27 +116,33 @@
     margin: 3rem auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 7rem;
 }
 
 .main__counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0 auto;
+
+
     background-color: #ff8906;
-    width: 10rem;
+    width: 18rem;
+    height: 3rem;
     border-radius: 7px;
 
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
     gap: 2.5rem;
     box-shadow: #965e1f 0px 3px 12px -2px, #ff8b062c 0px 3px 7px -3px;
 }
 
 .counter__p{
     font-weight: bold;
-    font-size: x-large;
+    font-size: 1rem;
     color: #fffffe;
+    align-self: center ;
 }
 
 .counter__button{
@@ -145,11 +151,13 @@
     color: #fffffe;
     
     border: 1px #fffffe solid;
-    width: 35px;
+    width: 50px;
     border-radius: 5px;
 }
+
 
 .counter__button:hover{
     background-color: #e48111;
     scale: 1.01;
 }
+
