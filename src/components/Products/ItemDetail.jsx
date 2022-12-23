@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/ItemDetail.css'
+import Categorias from '../UI/Categorias'
 
 const ItemDetail = (item) => {
 
@@ -12,7 +13,10 @@ const ItemDetail = (item) => {
 			<div className='detail__description description'>
 				<ul className='description__main main'>
 					{/*Agregar icono para cada categoria*/}
-					<li className='main__title '> {title} <span className='main__category'>{category.toUpperCase()}</span></li>
+					<li className='main__title '> 
+						<h3>{title}</h3>
+						<span className='main__category'>{<Categorias category={category} />}</span>
+					</li>
 					<li className='main__body'>
 						<p className=''>{description}</p><br/>
 						<h3 className='tracking-tighter'>Descripción</h3>
@@ -23,12 +27,12 @@ const ItemDetail = (item) => {
 						{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}</li>
 					<div className='main__cart'>
 						<a className= {offer===true? 'btn__cart--detail btn__cart--offer hover:animate-bounce' : 'btn__cart--detail btn__cart--nooffer'}>
-							Agregar al Carrito
+							 Agregar al Carrito
 						</a>
-						<div className='main__counter counter'>
-							<button className='counter__button'> - </button>
-							<h4 className='counter__p'>1</h4>
-							<button className='counter__button'> + </button>
+						<div className='main__contador'>
+							<button className='counter__b'> - </button>
+							<h4 className='counter__h'>1</h4>
+							<button className='counter__b'> + </button>
 						</div>
 					</div>
 				</ul>

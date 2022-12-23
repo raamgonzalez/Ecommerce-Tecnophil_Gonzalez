@@ -1,7 +1,8 @@
 .detail__box{
     margin: 2.5rem;
     border-radius: 1rem;
-
+    display: flex;
+    flex-direction: row;
 }
 
 .detail__description{
@@ -36,6 +37,8 @@
     font-weight: bold;
     font-size: xx-large;
     color: #fffffe;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main__body>h3{
@@ -79,12 +82,12 @@
     font-size: 1rem;
     place-self: end;
     margin-left: 5rem;
+    place-items: center;
 }
+
 
 .btn__cart--detail{
     padding: 0.1rem 2rem;
-    display: inline-block;
-
     font-weight: bold;
 
     text-align: center;
@@ -94,6 +97,7 @@
     -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
     -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
     box-shadow: 5px 5px 9px -3px rgba(0,0,0,0.46);
+
 
     border-radius: 7px;
     cursor: pointer;
@@ -112,18 +116,38 @@
     background-color: #e48111;
 }
 
+.btn__detail{
+    padding: 0.8rem 1rem;
+
+    color: #fffffe;
+    font-weight: 500;
+    background-color: #ff8906;
+    -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    box-shadow: 5px 5px 9px -3px rgba(0,0,0,0.46);
+
+    border-radius: 7px;
+}
+
 .main__cart{
     margin: 3rem auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-content: center;
     gap: 7rem;
 }
 
-.main__counter{
+.main__cart>a{
+    align-self: center;
+    padding: 0.8rem 1rem;
+}
+
+.main__contador{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
+    align-self: flex-start;
     margin: 0 auto;
 
 
@@ -131,21 +155,18 @@
     width: 18rem;
     height: 3rem;
     border-radius: 7px;
-
-
-
-    gap: 2.5rem;
     box-shadow: #965e1f 0px 3px 12px -2px, #ff8b062c 0px 3px 7px -3px;
 }
 
-.counter__p{
+
+.counter__h{
     font-weight: bold;
     font-size: 1rem;
     color: #fffffe;
     align-self: center ;
 }
 
-.counter__button{
+.counter__b{
     font-weight: bold;
     font-size: x-large;
     color: #fffffe;
@@ -155,9 +176,8 @@
     border-radius: 5px;
 }
 
-
-.counter__button:hover{
+.counter__b:hover{
     background-color: #e48111;
-    scale: 1.01;
+    scale: 1.02;
 }
 

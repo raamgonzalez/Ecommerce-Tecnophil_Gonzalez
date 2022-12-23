@@ -5,7 +5,7 @@ import Spinner from '../UI/Spinner/Spinner';
 import config from '../../config.json';
 import Item from './Item';
 
-const ItemsList = () => {
+const ItemList = () => {
 
     const {categoria} = useParams()
     const [cards, setCards] = useState([])
@@ -69,4 +69,4 @@ const ItemsList = () => {
     )
 }
 
-export default ItemsList
+export default ItemList
