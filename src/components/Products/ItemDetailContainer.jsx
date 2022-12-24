@@ -44,7 +44,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            {filter.map(({id, title, description, descriptiondetail, category, price, offer, img, alt},index) => (
+            {filter.map(({id, title,stock, description, descriptiondetail, category, price, offer, img, alt},index) => (
                 <div className='products_detail'>
                     <ItemDetail
                     id={id}
@@ -57,6 +57,7 @@ const ItemDetailContainer = () => {
                     alt={alt}
                     offer={offer}
                     category={category}
+                    stock={stock}
                     />
                 </div>
             ))}

@@ -5,7 +5,8 @@ import CartWidget from './CartWidget/CartWidget'
 import './NavBar.css'
 
 
-const NavBar = () => {
+const NavBar = (props) => {
+
 	return (
 	<nav className="navbar flex flex-row justify-between w-full border-b border-gray-400">
 		<div className="nav_div--title" id="brand ">

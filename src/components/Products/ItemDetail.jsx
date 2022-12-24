@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles/ItemDetail.css'
 import Categorias from '../UI/Categorias'
+import ItemCount from './ItemCount'
+import 'react-toastify/dist/ReactToastify.css';
+import { CarritoContext } from '../../context/CarritoContext';
 
 const ItemDetail = (item) => {
+	const { title, description, descriptiondetail,category, price, img, alt, offer, stock } = item
 
-	const { title,description, descriptiondetail,category, price, img, alt, offer } = item
-    // const { title,description, descriptiondetail,category, price, img, alt, offer } = props
+	const  {onAddCarrito} = useContext(CarritoContext)
+
 
     return (
 		<section className="detail__box flex">
@@ -25,16 +29,7 @@ const ItemDetail = (item) => {
 					<li className='detail__price'>
 						<p className='text__offer_price'>ARS ${Math.round(price/1.10)}</p>
 						{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}</li>
-					<div className='detail__cart'>
-						<a className= {offer===true? 'btn__cart--detail btn__cart--offer' : 'btn__cart--detail btn__cart--nooffer'}>
-							Agregar al Carrito
-						</a>
-						<div className='detail__contador'>
-							<button className='counter__b'> - </button>
-							<h4 className='counter__h'>1</h4>
-							<button className='counter__b'> + </button>
-						</div>
-					</div>
+					<ItemCount initialValue={1} stock={stock} offer={offer} onAddCarrito={onAddCarrito} item={item}/>
 				</ul>
 			</div> 
 		</section>

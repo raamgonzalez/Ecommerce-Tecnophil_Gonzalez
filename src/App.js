@@ -5,14 +5,13 @@ import Layout from './components/Global/Layout/Layout';
 import ItemListContainer from './components/Products/ItemListContainer';
 import ItemDetailContainer from './components/Products/ItemDetailContainer';
 import CartWidget from './components/Global/NavBar/CartWidget/CartWidget';
-
-
-
+import CarritoContextProvider from './context/CarritoContext';
 
 
 
 function App() {
 	return (
+	<CarritoContextProvider>
 		<Router>
 			<Layout>
 				<Routes>
@@ -24,6 +23,7 @@ function App() {
 				</Routes>
 			</Layout>
 		</Router>
+	</CarritoContextProvider>
 	);
 }
 

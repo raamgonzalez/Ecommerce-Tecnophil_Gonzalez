@@ -1,0 +1,38 @@
+.detail__contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-self: flex-start;
+    margin: 0 auto;
+
+
+    background-color: #ff8906;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 7px;
+    box-shadow: #965e1f 0px 3px 12px -2px, #ff8b062c 0px 3px 7px -3px;
+}
+
+
+.counter__h{
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fffffe;
+    align-self: center ;
+}
+
+.counter__b{
+    font-weight: bold;
+    font-size: x-large;
+    color: #fffffe;
+    
+    border: 1px #fffffe solid;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.counter__b:hover{
+    background-color: #e48111;
+    scale: 1.02;
+}

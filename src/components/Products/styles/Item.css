@@ -7,12 +7,11 @@
     margin: 0;
     padding: 1rem 1rem;
     border-radius: 20px;
-    min-height: 30rem;
+    /* min-height: 30rem; */
     background-color:  #fffffe;
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .card__header{
@@ -46,7 +45,7 @@
 }
 
 .box__card{
-    margin: auto;
+    display: inline-block;
 }
 
 .box__card:hover{
@@ -108,17 +107,14 @@
     width: 0;
     height: 0;
     border-right: 30px solid transparent;
-    border-top: 30px solid #f0ad4e;
-    border-left: 30px solid #f0ad4e;
+    border-top: 30px solid #e6a358;
+    border-left: 30px solid #e6a358;
     border-bottom: 30px solid transparent;
-
     border-radius: 20px 0 0 ;
-    /* width: 15%;
-    height: 50px; */
-     /* border: 1px #a7a9be solid; */
 }
 
 .card__stock{
+    color: #0f0e17;
     font-size: medium;
     font-weight: bold;
     background-color: transparent;

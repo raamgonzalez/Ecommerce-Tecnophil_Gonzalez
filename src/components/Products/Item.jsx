@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import './styles/Item.css'
 
 const Item = (props) => {
+
 const { id, title, description, price, img, alt, stock, offer } = props;
 
 	return (
-	<Link className='link__card' to={`/item/detail/${id}`}>
+	<div className='link__card'>
 		<section className='box__card'>
 			<div className='card__stock--container'>
-						<h4 className='card__stock'>{stock}u</h4>
+						<h4 className='card__stock'>{stock}</h4>
 			</div>
 		{/* flex flex-col justify-center align-middle items-center gap-1 bg-white shadow-md rounded-lg max-w-sm dark:border-gray-700 */}
 			<div className='card'>
@@ -28,17 +29,17 @@ const { id, title, description, price, img, alt, stock, offer } = props;
 							<p className='text__offer--price'>ARS ${Math.round(price/1.10)}</p>
 						{offer===true? <p className='text__offer--item font-bold'>ARS ${price}</p> : null}
 						</div>
-						{/*Editar las clases y manejar por css*/}
+						{/*Cambiar si corresponde por Ver detalle*/}
 					<div>
-						<Link to='#' class= {offer===true? 'btn__cart btn__cart--offer' : 'btn__cart btn__cart--nooffer'}>
-							Agregar al Carrito
+						<Link to={`/item/detail/${id}`} class= {offer===true? 'btn__cart btn__cart--offer' : 'btn__cart btn__cart--nooffer'}>
+							Ver detalle
 						</Link>
 					</div>
 					</div>
 				</div>	
 			</div>	
 		</section>
-	</Link>
+	</div>
 	);
 };
 
