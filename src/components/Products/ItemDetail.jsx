@@ -13,23 +13,23 @@ const ItemDetail = (item) => {
 			<div className='detail__description description'>
 				<ul className='description__main main'>
 					{/*Agregar icono para cada categoria*/}
-					<li className='main__title '> 
+					<li className='detail__title '> 
 						<h3>{title}</h3>
-						<span className='main__category'>{<Categorias category={category} />}</span>
+						<span className='detail__category'>{<Categorias category={category} />}</span>
 					</li>
-					<li className='main__body'>
+					<li className='detail__body'>
 						<p className=''>{description}</p><br/>
 						<h3 className='tracking-tighter'>Descripción</h3>
 						<p>{descriptiondetail}</p>
 					</li>
-					<li className='main__price'>
+					<li className='detail__price'>
 						<p className='text__offer_price'>ARS ${Math.round(price/1.10)}</p>
 						{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}</li>
-					<div className='main__cart'>
-						<a className= {offer===true? 'btn__cart--detail btn__cart--offer hover:animate-bounce' : 'btn__cart--detail btn__cart--nooffer'}>
-							 Agregar al Carrito
+					<div className='detail__cart'>
+						<a className= {offer===true? 'btn__cart--detail btn__cart--offer' : 'btn__cart--detail btn__cart--nooffer'}>
+							Agregar al Carrito
 						</a>
-						<div className='main__contador'>
+						<div className='detail__contador'>
 							<button className='counter__b'> - </button>
 							<h4 className='counter__h'>1</h4>
 							<button className='counter__b'> + </button>

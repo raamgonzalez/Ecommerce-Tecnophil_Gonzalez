@@ -1,5 +1,6 @@
 .products{
-    margin: 9% 5rem;
+    margin: 5rem auto;
+    width: 100%;
 }
 
 .products__container{

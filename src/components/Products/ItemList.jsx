@@ -45,9 +45,10 @@ const ItemList = () => {
 
 
     return ( 
-        <section className='products'>
+    <section className='products'>
         {cards.length < 1}
-        <div className="products__container flex flex-row flex-wrap justify-center mx-96 my-16">
+		{/* flex flex-row flex-wrap justify-center mx-96 my-16 */}
+        <div className="products__container">
             {loading && <Spinner/>}
             { !loading &&  cards.length > 0 ? filter.map(({id, title, description, price, offer, img, alt, stock},index) => (
                 <Item

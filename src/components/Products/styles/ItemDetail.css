@@ -32,7 +32,7 @@
     flex-direction: column;
 }
 
-.main__title{
+.detail__title{
     display: block;
     font-weight: bold;
     font-size: xx-large;
@@ -41,18 +41,18 @@
     justify-content: space-between;
 }
 
-.main__body>h3{
+.detail__body>h3{
     letter-spacing: 1px;
     padding: 2px;
     text-decoration: underline;
     color: #fffffe;
 }
 
-.main__body>p{
+.detail__body>p{
     margin-left: 2rem;
 }
 
-.main__price{
+.detail__price{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -78,7 +78,7 @@
     margin: 0 2rem;
 }
 
-.main__category{
+.detail__category{
     font-size: 1rem;
     place-self: end;
     margin-left: 5rem;
@@ -129,7 +129,7 @@
     border-radius: 7px;
 }
 
-.main__cart{
+.detail__cart{
     margin: 3rem auto;
     display: flex;
     flex-direction: row;
@@ -137,12 +137,12 @@
     gap: 7rem;
 }
 
-.main__cart>a{
+.detail__cart>a{
     align-self: center;
-    padding: 0.8rem 1rem;
+    display: inline-block;
 }
 
-.main__contador{
+.detail__contador{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
