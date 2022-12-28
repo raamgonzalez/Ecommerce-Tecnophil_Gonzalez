@@ -12,8 +12,8 @@ const Footer = () => {
             </div>
                 {/* Arreglar color de Red social */}
             <div className='flex flex-col justify-center gap-1'>
-                <a className='text-neutral-100' href="https://www.instagram.com/reguluxlamps"><img className='w-6 h-7' src="../icons/icons8-instagram-90.svg" alt="Hola" /></a>
-                <a className='text-neutral-100' href="https://www.instagram.com/reguluxlamps"><img className=' w-6 h-7' src="../icons/icons8-facebook-90.svg" alt="Hola" /></a>
+                <a className='text-neutral-100' href="https://www.instagram.com/reguluxlamps"><img className='w-6 h-7' src="../icons/icons8-instagram-90.svg" alt="Icono Instagram" /></a>
+                <a className='text-neutral-100' href="https://www.instagram.com/reguluxlamps"><img className=' w-6 h-7' src="../icons/icons8-facebook-90.svg" alt="Icono Facebook" /></a>
             </div>
         </div>
     </footer>

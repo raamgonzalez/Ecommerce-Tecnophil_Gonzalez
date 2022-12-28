@@ -16,7 +16,7 @@
 .detail__img{
     width: 30rem;
     border-radius: 1rem;
-    box-shadow: #803750 0px 6px 12px -2px, #ff8b062c 0px 3px 7px -3px;
+    box-shadow: var(--shadow-elevation-medium)
 }
 
 .detail__description{
@@ -182,3 +182,29 @@
     scale: 1.02;
 }
 
+/* .detail__volver--container{
+    position: relative;
+    top: 0rem;
+    left: 3.75rem;
+    /* background-color: rgb(172, 39, 39); 
+
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #e6a358;
+    border-left: 30px solid #e6a358;
+    border-bottom: 30px solid transparent;
+    border-radius: 15px 0 0 ;
+} */
+
+.detail__volver{
+    color: #0f0e17;
+    font-size: 1.5rem;
+    position: relative;
+    top: 0rem;
+    left: 1.7rem;
+}
+
+.detail__icon{
+    color:#803750;
+}

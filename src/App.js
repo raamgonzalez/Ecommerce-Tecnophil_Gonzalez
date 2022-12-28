@@ -11,19 +11,20 @@ import CarritoContextProvider from './context/CarritoContext';
 
 function App() {
 	return (
-	<CarritoContextProvider>
+
 		<Router>
-			<Layout>
-				<Routes>
-					<Route path='/' element={<ItemListContainer/>}/>
-					<Route path='/category/:categoria' element={<ItemListContainer/>} />
-					<Route path='/item/detail/:id' element={<ItemDetailContainer/>} />
-					<Route path='/cart' element={<CartWidget/>} />
-					<Route path='*' element={<Error404/>} />
-				</Routes>
-			</Layout>
+			<CarritoContextProvider>
+				<Layout>
+					<Routes>
+						<Route path='/' element={<ItemListContainer/>}/>
+						<Route path='/category/:categoria' element={<ItemListContainer/>} />
+						<Route path='/item/detail/:id' element={<ItemDetailContainer/>} />
+						<Route path='/cart' element={<CartWidget/>} />
+						<Route path='*' element={<Error404/>} />
+					</Routes>
+				</Layout>
+			</CarritoContextProvider>
 		</Router>
-	</CarritoContextProvider>
 	);
 }
 

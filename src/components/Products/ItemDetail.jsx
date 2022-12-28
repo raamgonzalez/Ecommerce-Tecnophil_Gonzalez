@@ -1,18 +1,19 @@
-import React, { useContext } from 'react'
 import './styles/ItemDetail.css'
 import Categorias from '../UI/Categorias'
 import ItemCount from './ItemCount'
 import 'react-toastify/dist/ReactToastify.css';
-import { CarritoContext } from '../../context/CarritoContext';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
+import { Link, NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ItemDetail = (item) => {
+const ItemDetail = (item, onAdd) => {
 	const { title, description, descriptiondetail,category, price, img, alt, offer, stock } = item
-
-	const  {onAddCarrito} = useContext(CarritoContext)
-
 
     return (
 		<section className="detail__box flex">
+				<div className='detail__volver--container'>
+					<Link to='/' className='detail__volver'><FontAwesomeIcon className="detail__icon" style = {{cursor:"pointer"}} icon={faArrowLeft} /></Link>
+				</div>
 				<img className='detail__img' src={img} alt={alt || "Imagen del producto"}/>
 			<div className='detail__description description'>
 				<ul className='description__main main'>
@@ -29,7 +30,7 @@ const ItemDetail = (item) => {
 					<li className='detail__price'>
 						<p className='text__offer_price'>ARS ${Math.round(price/1.10)}</p>
 						{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}</li>
-					<ItemCount initialValue={1} stock={stock} offer={offer} onAddCarrito={onAddCarrito} item={item}/>
+					<ItemCount stock={stock}   item={item}/>
 				</ul>
 			</div> 
 		</section>
