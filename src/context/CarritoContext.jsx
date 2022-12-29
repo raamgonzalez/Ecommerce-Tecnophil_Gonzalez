@@ -11,17 +11,25 @@ const CarritoContextProvider = ({children}) => {
     const limpiarCarrito = () => setCarrito([])
 
     //Verificar si el producto ya esta en el carrito
-    const estaEnCarrito = (carrito, item) => carrito.some((producto) => producto.id === item.id)
+    const estaEnCarrito = (id) => carrito.some((producto) => producto.id === id)
 
     //Borrar carrito
     const borrarProducto = (id) => setCarrito(carrito.filter((producto) => producto.id !== id))
 
     //Agregar al carrito
-    const onAddProducto = (producto, newQuantity) => {
+    const onAddProducto = (producto, quantity) => {
         // setCarrito([...carrito, producto])
-        const nuevoCarrito = carrito.filter(item => item.id !== producto.id)
-        nuevoCarrito.push({...producto, quantity: newQuantity})
-        setCarrito(nuevoCarrito)
+        // const nuevoCarrito = carrito.filter(item => item.id !== producto.id)
+        // nuevoCarrito.push({...producto, quantity: newQuantity})
+        // setCarrito(nuevoCarrito)
+        if (estaEnCarrito(producto.id)) {
+            setCarrito(carrito.map((item) => {
+                return producto.id === item.id ? {...item, quantity: item.quantity + quantity} : item
+            }));
+        }else{
+            setCarrito([...carrito, {...producto, quantity}])
+        }
+        
 
 
         toast(`Agregaste ${producto.cantidad} unidades al carrito`, {
@@ -34,6 +42,17 @@ const CarritoContextProvider = ({children}) => {
 			progress: undefined,
 			theme: "dark",
 			});
+    }
+
+
+    //Total Compra
+    const totalCompra = () => {
+        return carrito.reduce((acumulador, producto) => acumulador + producto.price * producto.quantity, 0)
+    }
+
+    //Total de productos
+    const totalProductos = () => {
+        return carrito.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0)
     }
 
     console.log('carrito:', carrito)
@@ -58,7 +77,9 @@ const CarritoContextProvider = ({children}) => {
     // }
 
     return (
-        <CarritoContext.Provider value={{ 
+        <CarritoContext.Provider value={{
+            totalCompra,
+            totalProductos,
             onAddProducto , 
             carrito, 
             limpiarCarrito, 

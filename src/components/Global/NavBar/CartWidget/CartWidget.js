@@ -6,10 +6,10 @@ import { CarritoContext } from '../../../../context/CarritoContext'
 import '../CartWidget/CartWidget.css'    
 
 
-const CartWidget = () => {
-
+const CartWidget = (props) => {
 
     const {carrito} = useContext(CarritoContext)
+
     
     return (
     <>
