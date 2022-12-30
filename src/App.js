@@ -4,8 +4,8 @@ import Error404 from './components/Global/PageNotFound/Error404';
 import Layout from './components/Global/Layout/Layout';
 import ItemListContainer from './components/Products/ItemListContainer';
 import ItemDetailContainer from './components/Products/ItemDetailContainer';
-import CartWidget from './components/Global/NavBar/CartWidget/CartWidget';
 import CarritoContextProvider from './context/CarritoContext';
+import Cart from './components/Cart/Cart';
 
 
 
@@ -19,7 +19,7 @@ function App() {
 						<Route path='/' element={<ItemListContainer/>}/>
 						<Route path='/category/:categoria' element={<ItemListContainer/>} />
 						<Route path='/item/detail/:id' element={<ItemDetailContainer/>} />
-						<Route path='/cart' element={<CartWidget/>} />
+						<Route path='/cart' element={<Cart/>} />
 						<Route path='*' element={<Error404/>} />
 					</Routes>
 				</Layout>

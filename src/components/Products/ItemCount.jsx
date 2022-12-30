@@ -51,7 +51,7 @@ const ItemCount = (item) => {
         {
             irACarrito ?
             <div className='flex'>
-                <Link to='/cart'><button className='btn__cart'>Terminar compra</button></Link>  
+                <Link to='/cart' item={item}><button className='btn__cart'>Terminar compra</button></Link>  
             </div>
             : null
         }

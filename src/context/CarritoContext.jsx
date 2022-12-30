@@ -1,3 +1,4 @@
+import { calcLength } from 'framer-motion';
 import React, {createContext, useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -11,28 +12,29 @@ const CarritoContextProvider = ({children}) => {
     const limpiarCarrito = () => setCarrito([])
 
     //Verificar si el producto ya esta en el carrito
-    const estaEnCarrito = (id) => carrito.some((producto) => producto.id === id)
+    const estaEnCarrito = (id) => carrito.some((item) => item.id === id)
 
     //Borrar carrito
-    const borrarProducto = (id) => setCarrito(carrito.filter((producto) => producto.id !== id))
+    const borrarProducto = (id) => setCarrito(carrito.filter((item) => item.id !== id))
 
     //Agregar al carrito
-    const onAddProducto = (producto, quantity) => {
+    const onAddProducto = (item, quantity) => {
         // setCarrito([...carrito, producto])
         // const nuevoCarrito = carrito.filter(item => item.id !== producto.id)
         // nuevoCarrito.push({...producto, quantity: newQuantity})
         // setCarrito(nuevoCarrito)
-        if (estaEnCarrito(producto.id)) {
-            setCarrito(carrito.map((item) => {
-                return producto.id === item.id ? {...item, quantity: item.quantity + quantity} : item
+        if (estaEnCarrito(item.id)) {
+            setCarrito(carrito.map((product) => {
+                return item.id === product.id ? {...product, quantity: item.quantity + quantity} : item
             }));
         }else{
-            setCarrito([...carrito, {...producto, quantity}])
+            console.log(item)
+            setCarrito([...carrito, {...item, quantity}])
         }
         
 
 
-        toast(`Agregaste ${producto.cantidad} unidades al carrito`, {
+        toast(`Agregaste ${quantity} unidades al carrito`, {
 			position: "bottom-right",
 			autoClose: 2000,
 			hideProgressBar: false,
@@ -52,10 +54,10 @@ const CarritoContextProvider = ({children}) => {
 
     //Total de productos
     const totalProductos = () => {
-        return carrito.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0)
+        const test = carrito.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0)
+        return console.log(test)
     }
 
-    console.log('carrito:', carrito)
 
     
 
@@ -80,11 +82,11 @@ const CarritoContextProvider = ({children}) => {
         <CarritoContext.Provider value={{
             totalCompra,
             totalProductos,
-            onAddProducto , 
-            carrito, 
+            onAddProducto,
             limpiarCarrito, 
             estaEnCarrito, 
-            borrarProducto}}
+            borrarProducto,
+            carrito}}
             > 
             {children}
             <ToastContainer />

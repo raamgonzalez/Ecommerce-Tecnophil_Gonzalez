@@ -3,10 +3,10 @@ import Categorias from '../UI/Categorias'
 import ItemCount from './ItemCount'
 import 'react-toastify/dist/ReactToastify.css';
 import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ItemDetail = (item, onAdd) => {
+const ItemDetail = (item) => {
 	const { title, description, descriptiondetail,category, price, img, alt, offer, stock } = item
 
     return (

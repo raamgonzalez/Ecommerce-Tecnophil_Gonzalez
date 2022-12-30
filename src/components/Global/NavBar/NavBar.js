@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import CartWidget from './CartWidget/CartWidget'
 
 import './NavBar.css'
@@ -20,7 +20,7 @@ const NavBar = (props) => {
 				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/moviles'>Moviles</NavLink></li>
 				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/tv'>TV & AV</NavLink></li>
 				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/notebooks'>Notebooks</NavLink></li>
-				<CartWidget quantity={quantity}/>
+				<CartWidget/>
 		</ul>
 	</nav>
 	)
