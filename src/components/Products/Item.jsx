@@ -30,11 +30,9 @@ const { id, title, description, price, img, alt, stock, offer } = props;
 						{offer===true? <p className='text__offer--item font-bold'>ARS ${price}</p> : null}
 						</div>
 						{/*Cambiar si corresponde por Ver detalle*/}
-					<div>
 						<Link to={`/item/detail/${id}`} className= {offer===true? 'btn__cart btn__cart--offer' : 'btn__cart btn__cart--nooffer'}>
-							Ver detalle
+							<p className='test'>Ver detalle</p>
 						</Link>
-					</div>
 					</div>
 				</div>	
 			</div>	

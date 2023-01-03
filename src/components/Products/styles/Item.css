@@ -2,12 +2,10 @@
     width: 20rem;
 }
 
-
 .card{
     margin: 0;
     padding: 1rem 1rem;
     border-radius: 20px;
-    /* min-height: 30rem; */
     background-color:  #fffffe;
 
     display: flex;
@@ -62,18 +60,29 @@
 
 
 .btn__cart{
-    padding: 0.8rem 1rem;
-    flex-grow: 1;
+    display: inline-block;
+    min-width: 8rem;
+    height: 3rem;
 
     color: #fffffe;
     font-weight: 500;
     background-color: #ff8906;
     -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
     -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
-    box-shadow: 5px 5px 9px -3px rgba(0,0,0,0.46);
+    box-shadow: #965e1f 0px 3px 12px -2px, #ff8b062c 0px 3px 7px -3px;
 
     border-radius: 7px;
 }
+
+.btn__cart--offer:hover{
+    background-color: rgb(172, 39, 39);
+    transition: ease-in-out;
+}
+
+.test{
+    padding: 0.6rem;
+}
+
 
 .text__offer--price{
     font-weight: bold;
@@ -83,21 +92,11 @@
 .text__offer--item{
     padding: 0;
     display: inline-block;
-    /* align-self: center; */
     color: #a7a9be;
     font-size: small;
     text-decoration: line-through;
 }
 
-.btn__cart--offer:hover{
-    /* background-color: rgb(172, 39, 39); */
-    transition: ease-in-out;
-
-}
-
-.btn__cart--nooffer:hover{
-    background-color: #e48111;
-}
 
 .card__stock--container{
     position: relative;

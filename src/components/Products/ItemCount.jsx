@@ -38,28 +38,32 @@ const ItemCount = (item) => {
 
     const increase = () => setCount(count + 1);
 
-    return (<>
-        <div className='detail__cart'>
-            <div className='detail__contador'>
-                <button disabled={count <= 1} onClick={decrease} className='counter__b'> - </button>
-                <h4 className='counter__h'>{count}</h4>
-                <button disabled={count >=stock} onClick={increase} className='counter__b'> + </button>
+    return (
+    <>
+        <div className='detail__itemcount flex flex-col'>
+            <div className='detail__count'>
+                <div className='detail__contador'>
+                    <button disabled={count <= 1} onClick={decrease} className='counter__b'> - </button>
+                    <h4 className='counter__h'>{count}</h4>
+                    <button disabled={count >=stock} onClick={increase} className='counter__b'> + </button>
+                </div>
+                <button 
+                disabled={ stock <= 0} 
+                onClick={() => onAdd(count)}
+                className= {offer===true? 'btn__cart btn__cart--offer btn__cart--count' : 'btn__cart btn__cart--count'}>
+                    Agregar al Carrito
+                </button>
             </div>
-            <button 
-            disabled={ stock <= 0} 
-            onClick={() => onAdd(count)}
-            className= {offer===true? 'btn__cart--detail btn__cart--offer' : 'btn__cart--detail btn__cart--nooffer'}>
-                Agregar al Carrito
-            </button>
+            {
+                irACarrito ?
+                <div className='cart__buttons'>
+                    <Link to='/cart' item={item}><button className='btn__cart'>Terminar compra</button></Link>
+                    <Link to='/' item={item}><button className='btn__cart'>Volver a comprar</button></Link>
+                </div>
+                : null
+            }
         </div>
-        {
-            irACarrito ?
-            <div className='flex'>
-                <Link to='/cart' item={item}><button className='btn__cart'>Terminar compra</button></Link>  
-            </div>
-            : null
-        }
-        </>
+    </>
     )
 }
 

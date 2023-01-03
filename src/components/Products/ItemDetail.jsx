@@ -10,7 +10,7 @@ const ItemDetail = (item) => {
 	const { title, description, descriptiondetail,category, price, img, alt, offer } = item
 
     return (
-		<section className="detail__box flex">
+		<section className="detail__box">
 				<div className='detail__volver--container'>
 					<Link to='/' className='detail__volver'><FontAwesomeIcon className="detail__icon" style = {{cursor:"pointer"}} icon={faArrowLeft} /></Link>
 				</div>
@@ -18,7 +18,7 @@ const ItemDetail = (item) => {
 			<div className='detail__description description'>
 				<ul className='description__main main'>
 					{/*Agregar icono para cada categoria*/}
-					<li className='detail__title '> 
+					<li className='detail__title'> 
 						<h3>{title}</h3>
 						<span className='detail__category'>{<Categorias category={category} />}</span>
 					</li>
@@ -29,10 +29,13 @@ const ItemDetail = (item) => {
 					</li>
 					<li className='detail__price'>
 						<p className='text__offer_price'>ARS ${Math.round(price/1.10)}</p>
-						{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}</li>
-					<ItemCount item={item}/>
+					{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}
+					</li>
 				</ul>
-			</div> 
+				<div className='detail__button'>
+					<ItemCount item={item}/>
+				</div>
+			</div>
 		</section>
     )
 }
