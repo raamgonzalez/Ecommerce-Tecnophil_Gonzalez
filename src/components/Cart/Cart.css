@@ -1,3 +1,12 @@
 .test{
     color: aliceblue;
 }
+
+.cart__products{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}

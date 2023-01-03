@@ -19,11 +19,14 @@ const Cart = (item) => {
     }
 
     return (
-        <>
-            {carrito.map((product) => <ItemCart key={product.id} product={product}/>)}
-            <p>
-                total: ${totalCompra}
-            </p>    
+        <>  
+            <div className='cart__products'>
+                <h2 className='test'>Carrito de compras</h2>
+                {carrito.map((product) => <ItemCart id={product.id} product={product}/>)}
+            </div>
+                <p>
+                    total: ${totalCompra}
+                </p>  
         </>
     )
 }

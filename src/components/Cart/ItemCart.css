@@ -1,3 +1,36 @@
 .test{
     color: aliceblue;
 }
+
+.detail__category{
+    align-self: center;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+
+.card__quantity{
+
+    position: relative;
+    top: 3.72rem;
+    /* background-color: rgb(172, 39, 39); */
+
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #e6a358;
+    border-left: 30px solid #e6a358;
+    border-bottom: 30px solid transparent;
+    border-radius: 20px 0 0 ;
+    
+}
+
+.card__stock{
+    color: #0f0e17;
+    font-size: medium;
+    font-weight: bold;
+    background-color: transparent;
+    position: relative;
+    top: -1.6rem;
+    left: -1rem;
+}

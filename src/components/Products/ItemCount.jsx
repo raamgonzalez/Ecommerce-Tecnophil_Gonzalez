@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { useContext } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -8,10 +7,15 @@ import './styles/ItemCount.css'
 
 
 const ItemCount = (item) => {
+
+    const props = item.item;
+    const {stock, offer} = props;
+
+    
     const [irACarrito, setIrACarrito] = useState(false);
 	const {onAddProducto} = useContext(CarritoContext)
     const [count, setCount] = useState(1);
-    
+
     // useEffect(() => {
     // return () => {
     //     setCount(parseInt(1))
@@ -39,12 +43,12 @@ const ItemCount = (item) => {
             <div className='detail__contador'>
                 <button disabled={count <= 1} onClick={decrease} className='counter__b'> - </button>
                 <h4 className='counter__h'>{count}</h4>
-                <button disabled={count >= item.stock} onClick={increase} className='counter__b'> + </button>
+                <button disabled={count >=stock} onClick={increase} className='counter__b'> + </button>
             </div>
             <button 
-            disabled={ item.stock <= 0} 
+            disabled={ stock <= 0} 
             onClick={() => onAdd(count)}
-            className= {item.offer===true? 'btn__cart--detail btn__cart--offer' : 'btn__cart--detail btn__cart--nooffer'}>
+            className= {offer===true? 'btn__cart--detail btn__cart--offer' : 'btn__cart--detail btn__cart--nooffer'}>
                 Agregar al Carrito
             </button>
         </div>

@@ -53,7 +53,7 @@ const ItemList = () => {
             { !loading &&  cards.length > 0 ? filter.map(({id, title, description, price, offer, img, alt, stock},index) => (
                 <Item
                 id={id}
-                key={index}	
+                key={index}
                 title={title} 
                 description={description} 
                 price={price}

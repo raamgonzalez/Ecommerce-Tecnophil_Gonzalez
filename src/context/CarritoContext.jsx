@@ -1,4 +1,3 @@
-import { calcLength } from 'framer-motion';
 import React, {createContext, useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -7,30 +6,37 @@ export const CarritoContext = createContext('');
 
 const CarritoContextProvider = ({children}) => {
     const [carrito, setCarrito] = useState([])
+    console.log("Este clg es de CarritoContext", carrito)
 
     //Limpiar carrito
     const limpiarCarrito = () => setCarrito([])
 
     //Verificar si el producto ya esta en el carrito
-    const estaEnCarrito = (id) => carrito.some((item) => item.id === id)
+    // const estaEnCarrito = (id) => carrito.find((product) => product.id === id) ? true : false;
+    const estaEnCarrito = (id) => {
+        //----TEST---//
+        console.log("Esta en carrito id", id)
+        return carrito.find((product)=> product.item.id === id) ? true : false;
+    }
+
 
     //Borrar carrito
     const borrarProducto = (id) => setCarrito(carrito.filter((item) => item.id !== id))
 
     //Agregar al carrito
     const onAddProducto = (item, quantity) => {
-        // setCarrito([...carrito, producto])
-        // const nuevoCarrito = carrito.filter(item => item.id !== producto.id)
-        // nuevoCarrito.push({...producto, quantity: newQuantity})
-        // setCarrito(nuevoCarrito)
-        if (estaEnCarrito(item.id)) {
+        if (estaEnCarrito(item.item.id)) {
             setCarrito(carrito.map((product) => {
-                return item.id === product.id ? {...product, quantity: item.quantity + quantity} : item
+                //----TEST---//
+                console.log("Add Product IF", product, quantity)
+                return product.id === item.id ? {...product, quantity: product.quantity + quantity} : product
             }));
         }else{
-            console.log(item)
+            //----TEST---//
+            console.log("Add Product Else:", item, quantity)
             setCarrito([...carrito, {...item, quantity}])
         }
+    
         
 
 
@@ -58,26 +64,6 @@ const CarritoContextProvider = ({children}) => {
         return console.log(test)
     }
 
-
-    
-
-
-    // const onAddCarrito = (producto) => {
-    //     setCarrito([...carrito, producto.cantidad])
-    //     console.log(...carrito)
-    //     toast(`Agregaste ${producto.cantidad} unidades al carrito`, {
-	// 		position: "bottom-right",
-	// 		autoClose: 2000,
-	// 		hideProgressBar: false,
-	// 		closeOnClick: true,
-	// 		pauseOnHover: false,
-	// 		draggable: true,
-	// 		progress: undefined,
-	// 		theme: "dark",
-	// 		});
-    //     console.log(carrito)
-    // }
-
     return (
         <CarritoContext.Provider value={{
             totalCompra,
@@ -91,7 +77,6 @@ const CarritoContextProvider = ({children}) => {
             {children}
             <ToastContainer />
         </CarritoContext.Provider>
-
     )
 }
 

@@ -10,7 +10,7 @@ const ItemListContainer = () => {
 	const {id} = useParams();
 
     return ( 
-		<ItemList item ={ id }/>
+		  <ItemList item ={ id }/>
     )
 }
 

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ItemDetail = (item) => {
-	const { title, description, descriptiondetail,category, price, img, alt, offer, stock } = item
+	const { title, description, descriptiondetail,category, price, img, alt, offer } = item
 
     return (
 		<section className="detail__box flex">
@@ -30,11 +30,10 @@ const ItemDetail = (item) => {
 					<li className='detail__price'>
 						<p className='text__offer_price'>ARS ${Math.round(price/1.10)}</p>
 						{offer===true? <p className="text__offer--detail font-bold">ARS ${price}</p> : null}</li>
-					<ItemCount stock={stock}   item={item}/>
+					<ItemCount item={item}/>
 				</ul>
 			</div> 
 		</section>
-	
     )
 }
 
