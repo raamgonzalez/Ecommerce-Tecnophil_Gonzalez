@@ -50,15 +50,16 @@ const ItemCount = (item) => {
                 <button 
                 disabled={ stock <= 0} 
                 onClick={() => onAdd(count)}
-                className= {offer===true? 'btn__cart btn__cart--offer btn__cart--count' : 'btn__cart btn__cart--count'}>
+                className= {offer===true? 'btn__cart btn__cart--offer' : 'btn__cart '}>
                     Agregar al Carrito
                 </button>
             </div>
+            {/* <hr className='detail__hr'></hr> */}
             {
                 irACarrito ?
                 <div className='cart__buttons'>
-                    <Link to='/cart' item={item}><button className='btn__cart'>Terminar compra</button></Link>
-                    <Link to='/' item={item}><button className='btn__cart'>Volver a comprar</button></Link>
+                    <Link to='/cart' item={item}><button className='btn__cart--count'>Terminar compra</button></Link>
+                    <Link to='/' item={item}><button className='btn__cart--count'>Volver a comprar</button></Link>
                 </div>
                 : null
             }

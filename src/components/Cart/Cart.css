@@ -1,12 +1,19 @@
-.test{
-    color: aliceblue;
-}
+
 
 .cart__products{
-    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+}
+
+.cart__title{
+    color: aliceblue;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: x-large;
 }

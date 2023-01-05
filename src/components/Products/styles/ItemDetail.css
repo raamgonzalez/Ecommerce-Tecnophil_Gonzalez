@@ -16,6 +16,12 @@
     flex-direction: column;
 }
 
+.detail__title{
+    margin: 0;
+    padding: 2rem 0;
+    height: 0;
+}
+
 .detail__img{
     width: 30rem;
     min-height: fit-content;
@@ -137,21 +143,6 @@
     background-color: #e48111;
     scale: 1.02;
 }
-
-/* .detail__volver--container{
-    position: relative;
-    top: 0rem;
-    left: 3.75rem;
-    /* background-color: rgb(172, 39, 39); 
-
-    width: 0;
-    height: 0;
-    border-right: 30px solid transparent;
-    border-top: 30px solid #e6a358;
-    border-left: 30px solid #e6a358;
-    border-bottom: 30px solid transparent;
-    border-radius: 15px 0 0 ;
-} */
 
 .detail__volver{
     color: #0f0e17;
