@@ -12,8 +12,10 @@ const Cart = (item) => {
     if (carrito.length === 0) {
         return(
             <>
-                <h2 className='test'>No hay productos en el carrito</h2>
-                <Link className='btn__cart' to='/'>Volver al Home</Link>
+            <div className='cart__container flex flex-col'>
+                <h2 className='cart__main--title'>No hay productos en el carrito</h2>
+                <Link className='btn__cart btn__cart--menu' to='/'>Volver al Home</Link>
+            </div>
             </>
         );
     }

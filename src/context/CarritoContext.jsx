@@ -6,7 +6,6 @@ export const CarritoContext = createContext('');
 
 const CarritoContextProvider = ({children}) => {
     const [carrito, setCarrito] = useState([])
-    console.log("Este clg es de CarritoContext", carrito)
 
     //Limpiar carrito
     const limpiarCarrito = () => setCarrito([])
@@ -14,26 +13,23 @@ const CarritoContextProvider = ({children}) => {
     //Verificar si el producto ya esta en el carrito
     // const estaEnCarrito = (id) => carrito.find((product) => product.id === id) ? true : false;
     const estaEnCarrito = (id) => {
-        //----TEST---//
-        console.log("Esta en carrito id", id)
         return carrito.find((product)=> product.item.id === id) ? true : false;
     }
 
 
     //Borrar carrito
-    const borrarProducto = (id) => setCarrito(carrito.filter((item) => item.id !== id))
+    const borrarProducto = (id) => {
+        let bProducto = carrito.filter((item) => Number(item.item.id) !== Number(id))
+        setCarrito(bProducto)
+    }
 
     //Agregar al carrito
     const onAddProducto = (item, quantity) => {
         if (estaEnCarrito(item.item.id)) {
             setCarrito(carrito.map((product) => {
-                //----TEST---//
-                console.log("Add Product IF", product, quantity)
                 return product.id === item.id ? {...product, quantity: product.quantity + quantity} : product
             }));
         }else{
-            //----TEST---//
-            console.log("Add Product Else:", item, quantity)
             setCarrito([...carrito, {...item, quantity}])
         }
     

@@ -12,7 +12,7 @@ const useFirebase = () => {
             const prodCol = collection('productos', db)
             await getDocs(prodCol).then((snapshot) => {
                 if(snapshot.size === 0) {
-                    console.log('Base de datos esta vacio')
+                    console.log('Base de datos esta vacia')
                 }
                 setProducts(snapshot.docs.map((doc) => {
                     return {id: doc.id, ...doc.data()}

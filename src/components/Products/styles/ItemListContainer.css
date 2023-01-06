@@ -9,5 +9,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    place-items: center;
     gap: 2rem;
 }

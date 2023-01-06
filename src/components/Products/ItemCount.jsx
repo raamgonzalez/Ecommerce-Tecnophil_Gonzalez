@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { CarritoContext } from '../../context/CarritoContext'
 import './styles/ItemCount.css'
 
@@ -15,17 +15,8 @@ const ItemCount = (item) => {
     const [irACarrito, setIrACarrito] = useState(false);
 	const {onAddProducto} = useContext(CarritoContext)
     const [count, setCount] = useState(1);
+    const navigate = useNavigate();
 
-    // useEffect(() => {
-    // return () => {
-    //     setCount(parseInt(1))
-    // }
-    // }, [])
-    
-    // const producto = {
-    //     ...item,
-    //     quantity: count
-    // }
 
     const onAdd = (quantity) => {
         setIrACarrito(true);
@@ -58,8 +49,8 @@ const ItemCount = (item) => {
             {
                 irACarrito ?
                 <div className='cart__buttons'>
-                    <Link to='/cart' item={item}><button className='btn__cart--count'>Terminar compra</button></Link>
-                    <Link to='/' item={item}><button className='btn__cart--count'>Volver a comprar</button></Link>
+                    <Link onClick={() => navigate(-1)} item={item}><button className='btn__cart--count btn__checkout'>Volver a comprar</button></Link>
+                    <Link to='/cart' item={item}><button className='btn__cart--count '>Terminar compra</button></Link>
                 </div>
                 : null
             }

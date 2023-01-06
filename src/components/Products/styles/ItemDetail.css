@@ -96,10 +96,6 @@
 }
 
 
-.btn__cart--offer:hover{
-    background-color: rgb(172, 39, 39);
-}
-
 .detail__cart>a{
     align-self: center;
     display: inline-block;

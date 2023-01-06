@@ -1,4 +1,13 @@
-.test{
+.cart__container{
+    gap: 2rem;
+    height: 100%;
+    justify-content: center;
+    place-items: center;
+}
+
+
+.cart__main--title{
+    font-size: x-large;
     color: aliceblue;
 }
 
@@ -8,12 +17,15 @@
     font-size: 1rem;
 }
 
+.btn__cart--menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .card__quantity{
-
     position: relative;
     top: 3.72rem;
-    /* background-color: rgb(172, 39, 39); */
 
     width: 0;
     height: 0;
@@ -22,15 +34,71 @@
     border-left: 30px solid #e6a358;
     border-bottom: 30px solid transparent;
     border-radius: 20px 0 0 ;
-    
 }
 
-.card__stock{
-    color: #0f0e17;
-    font-size: medium;
+
+/* .btn__cart--delete{
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
+    
+    min-width: 8rem;
+    height: 3rem;
+
+    color: #fffffe;
+    font-weight: 500;
+    background-color: #e53170;
+    -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    box-shadow: var(--shadow-elevation-low);
+    border-radius: 7px;
+} */
+
+
+
+.btn__cart--delete {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
     font-weight: bold;
-    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
     position: relative;
-    top: -1.6rem;
-    left: -1rem;
+    display: inline-block;
+    outline: none;
+    border-radius: 7px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #c9396b;
+    z-index: 1;
+}
+
+.btn__cart--delete:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.btn__cart--delete:after {
+    border-radius: 7px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+    background-color: #e53170;
+    right: 0;
+}
+
+.btn__cart--delete:active {
+    top: 2px;
+}
+
+
+.text__offer--quantity > span{
+    color: #e53170;
 }
