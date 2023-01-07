@@ -24,7 +24,7 @@
 
 .detail__img{
     width: 30rem;
-    min-height: fit-content;
+    /* min-height: fit-content;  */
     border-radius: 1rem;
     box-shadow: var(--shadow-elevation-medium)
 }

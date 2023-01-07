@@ -19,7 +19,7 @@ const CarritoContextProvider = ({children}) => {
 
     //Borrar carrito
     const borrarProducto = (id) => {
-        let bProducto = carrito.filter((item) => Number(item.item.id) !== Number(id))
+        let bProducto = carrito.filter((item) => item.item.id !== id)
         setCarrito(bProducto)
     }
 

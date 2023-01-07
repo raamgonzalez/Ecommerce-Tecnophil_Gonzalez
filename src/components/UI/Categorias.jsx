@@ -1,9 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLaptop, faMobile, faTv} from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 const Categorias = (item) => {
 
+  const navigate = useNavigate();
   const {category} = item
   
   const categorySelector = (category) => {

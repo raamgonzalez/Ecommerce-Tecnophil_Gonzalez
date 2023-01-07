@@ -15,7 +15,7 @@ const { id, title, description, price, img, alt, stock, offer } = props;
 		{/* flex flex-col justify-center align-middle items-center gap-1 bg-white shadow-md rounded-lg max-w-sm dark:border-gray-700 */}
 			<div className='card'>
 			{/* w-72 h-72  rounded-2xl p-4 overflow-clip */}
-				<img src={img} className='card__image' alt={alt || 'Imagen del producto'}/>
+				<img src={img} className='card__image' alt={title || 'Imagen del producto'}/>
 				<div className='card__header px-6 pb-3 '>
 					<h3 className='text-slate-800 font-bold text-xl tracking-tight'>
 						{title}

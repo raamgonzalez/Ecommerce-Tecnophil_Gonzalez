@@ -7,14 +7,15 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ItemDetail = (item) => {
-	const { title, description, descriptiondetail,category, price, img, alt, offer } = item
+	const { title, description, descriptiondetail,category, price, img, offer } = item
+
 
     return (
 		<section className="detail__box">
 				<div className='detail__volver--container'>
 					<Link to='/' className='detail__volver'><FontAwesomeIcon className="detail__icon" style = {{cursor:"pointer"}} icon={faArrowLeft} /></Link>
 				</div>
-				<img className='detail__img' src={img} alt={alt || "Imagen del producto"}/>
+					<img className='detail__img' src={img} alt={title || "Imagen del producto"}/>
 			<div className='detail__description description'>
 				<ul className='description__main main'>
 					{/*Agregar icono para cada categoria*/}

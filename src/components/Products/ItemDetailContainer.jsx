@@ -1,67 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
-import { useState } from 'react'
-import { useParams } from 'react-router-dom'
-import config from '../../config.json';
+import { useNavigate, useParams } from 'react-router-dom'
+import useFirebase from '../../firebase/hook/useFirebase'
 import ItemDetail from './ItemDetail'
 import './styles/ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
 
     const {id} = useParams()
-    const [cardsdetail, setCardsDetail] = useState([])
+    const {producto, getProduct} = useFirebase()
+	const {productos} = useFirebase()  
+    console.log("producto", producto)
+    // const navigate = useNavigate()
 
 
+    useEffect(() => {
+        getProduct(id)
+    
+        return () => {
+            
+    }
+    }, [])
+    
 
-    const getCardsDetail = () =>{
-		const operacion = new Promise ((resolve) => {
-			setTimeout(() => {
-				resolve({
-					status:200,
-					data:config.cards,
-				})
-			},)
-		})
+    // const getCardsDetail = () =>{
+	// 	const operacion = new Promise ((resolve) => {
+	// 		setTimeout(() => {
+	// 			resolve({
+	// 				status:200,
+	// 				data:config.cards,
+	// 			})
+	// 		},)
+	// 	})
 	
-		operacion.then((result, error) => {
-			setCardsDetail(result.data)
-		})
-		.catch((error) => {
-			alert("Algo salío mal!")
-		})
-	}
+	// 	operacion.then((result, error) => {
+	// 		setCardsDetail(result.data)
+	// 	})
+	// 	.catch((error) => {
+	// 		alert("Algo salío mal!")
+	// 	})
+	// }
 
-	useEffect(() => {
-		getCardsDetail()
+    const filter = id? productos.filter((product) => product.id === id) : null
+    console.log("filtrado", filter)
 
-		return () => {
-			setCardsDetail([])
-		}
-	}, [id])
-
-    const filter = id? cardsdetail.filter((product) => product.id === Number(id)) : null
 
 
     return (
         <>
-            {filter.map(({id, title,stock, description, descriptiondetail, category, price, offer, img, alt},index) => (
+            {filter.map(({id, title, stock, description, descriptiondetail, category, price, offer, img}) => (
                 <div className='products_detail'>
                     <ItemDetail
                     id={id}
-                    key={index}	
                     title={title} 
-                    descriptiondetail={descriptiondetail} 
+                    descriptiondetail={descriptiondetail}
                     description={description}
                     price={price}
                     img={img}
-                    alt={alt}
                     offer={offer}
                     category={category}
                     stock={stock}
                     />
                 </div>
             ))}
-
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { CarritoContext } from '../../context/CarritoContext'
 import './styles/ItemCount.css'
 
