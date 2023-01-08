@@ -21,14 +21,17 @@ const Cart = (item) => {
     }
 
     return (
-        <>  
-            <h2 className='cart__title'>Carrito de compras</h2>
+        <>  <div className='cart__title'>
+                <h2 className='cart__title--h2'>Carrito de compras</h2>
+            </div>
             <div className='cart__products'>
                 {carrito.map((product) => <ItemCart id={product.id} product={product}/>)}
             </div>
-                <p>
-                    total: ${totalCompra}
-                </p>  
+            <div className='cart__total'>
+                <p className='cart__total--p'>
+                    Total compra  <span>$ARS {totalCompra()}</span>
+                </p>
+            </div>
         </>
     )
 }

@@ -50,7 +50,9 @@ const CarritoContextProvider = ({children}) => {
 
 
     //Total Compra
-    const totalCompra = () => carrito.reduce((acumulador, producto) => acumulador + producto.price * producto.quantity, 0)
+    const totalCompra = () => {
+        return carrito.reduce((acumulador, product) =>  acumulador + product.item.price * product.quantity, 0)
+    }
     
 
     //Total de productos

@@ -4,7 +4,7 @@ import './styles/Item.css'
 
 const Item = (props) => {
 
-const { id, title, description, price, img, alt, stock, offer } = props;
+const { id, title, description, price, img, stock, offer } = props;
 
 	return (
 	<div className='link__card'>

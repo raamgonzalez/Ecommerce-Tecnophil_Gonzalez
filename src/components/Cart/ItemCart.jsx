@@ -2,7 +2,6 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
-import Categorias from '../UI/Categorias'
 import './ItemCart.css'
 
 const ItemCart = (item) => {

@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 import useFirebase from '../../firebase/hook/useFirebase'
 import ItemDetail from './ItemDetail'
 import './styles/ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
 
-    const {id} = useParams()
-    const {producto, getProduct} = useFirebase()
-	const {productos} = useFirebase()  
-    console.log("producto", producto)
-    // const navigate = useNavigate()
+    const { id } = useParams()
+    const { getProduct} = useFirebase()
+	const { productos } = useFirebase()  
 
 
     useEffect(() => {
@@ -23,28 +21,7 @@ const ItemDetailContainer = () => {
     }, [])
     
 
-    // const getCardsDetail = () =>{
-	// 	const operacion = new Promise ((resolve) => {
-	// 		setTimeout(() => {
-	// 			resolve({
-	// 				status:200,
-	// 				data:config.cards,
-	// 			})
-	// 		},)
-	// 	})
-	
-	// 	operacion.then((result, error) => {
-	// 		setCardsDetail(result.data)
-	// 	})
-	// 	.catch((error) => {
-	// 		alert("Algo salío mal!")
-	// 	})
-	// }
-
     const filter = id? productos.filter((product) => product.id === id) : null
-    console.log("filtrado", filter)
-
-
 
     return (
         <>
