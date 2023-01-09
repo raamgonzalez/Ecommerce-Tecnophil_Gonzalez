@@ -7,7 +7,7 @@ import './ItemCart.css'
 const ItemCart = (item) => {
 	console.log(item)
 
-	const {product:{item:{title, description, price, img, alt,id }, quantity}} = item
+	const {product:{item:{title, description, price, img, alt,id, offer }, quantity}} = item
     const {borrarProducto} = useContext(CarritoContext)
 
     return (
@@ -28,8 +28,9 @@ const ItemCart = (item) => {
 							</div>
 							<div className='card_footer flex items-center justify-between'>
 								<div className='card__footer--price'>
-									<p className='text__offer--item font-bold'>Oferta ARS ${price}</p>
-									<p className='text__offer--quantity'>Total <span>ARS ${quantity * Math.round(price/1.10)}</span></p>
+								{offer===true? <p className='text__offer--item font-bold'>ARS ${price}</p> : <p className='text__price--item font-bold'>ARS ${price}</p>}
+									{/* <p className='text__offer--item font-bold'>Oferta ARS ${price}</p> */}
+									{offer ===true? <p className='text__offer--quantity'>Total <span>ARS ${quantity * Math.round(price/1.10)}</span></p>: <p className='text__offer--quantity'>Total <span>ARS ${quantity * price}</span></p>}
 								</div>
 								<button className='btn__cart btn__cart--delete ' onClick={() => borrarProducto(id)}>Eliminar</button>
 							</div>

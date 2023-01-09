@@ -16,9 +16,9 @@ const NavBar = (props) => {
 		</div>
 		<ul className="nav__list flex flex-row gap-4 my-auto place-items-baseline" >
 			{/* <li className="nav__link text-slate-300 py-2 rounded-lg mr-32"><a href="#">Home</a></li> */}
-				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/moviles'>Moviles</NavLink></li>
-				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/tv'>TV & AV</NavLink></li>
-				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/notebooks'>Notebooks</NavLink></li>
+				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/moviles' activeClassName='active'>Moviles</NavLink></li>
+				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/tv' activeClassName='active'>TV & AV</NavLink></li>
+				<li className="nav__link text-neutral-100 py-2 rounded-lg text-lg"><NavLink to='/category/notebooks' activeClassName='active'>Notebooks</NavLink></li>
 				<CartWidget/>
 		</ul>
 	</nav>

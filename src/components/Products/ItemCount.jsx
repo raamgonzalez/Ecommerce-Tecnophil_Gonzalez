@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { CarritoContext } from '../../context/CarritoContext'
+import useContador from '../../firebase/hook/useContador'
 import './styles/ItemCount.css'
 
 
@@ -10,11 +11,11 @@ const ItemCount = (item) => {
 
     const props = item.item;
     const {stock, offer} = props;
+    const { decrease, increase, count } = useContador()
 
     
     const [irACarrito, setIrACarrito] = useState(false);
 	const {onAddProducto} = useContext(CarritoContext)
-    const [count, setCount] = useState(1);
     const navigate = useNavigate();
 
 
@@ -22,12 +23,6 @@ const ItemCount = (item) => {
         setIrACarrito(true);
         onAddProducto(item, quantity)
     }
-
-
-
-    const decrease = () => setCount(count - 1);
-
-    const increase = () => setCount(count + 1);
 
     return (
     <>

@@ -11,11 +11,9 @@ const CarritoContextProvider = ({children}) => {
     const limpiarCarrito = () => setCarrito([])
 
     //Verificar si el producto ya esta en el carrito
-    // const estaEnCarrito = (id) => carrito.find((product) => product.id === id) ? true : false;
     const estaEnCarrito = (id) => {
         return carrito.find((product)=> product.item.id === id) ? true : false;
     }
-
 
     //Borrar carrito
     const borrarProducto = (id) => {

@@ -1,12 +1,4 @@
-/* .nav__list{
-    display: flex;
-    flex-direction: row;
+.active{
+    font-weight: lighter;
+    color: #ff8906;
 }
-
-.nav_div--title{
-    align-self: center;
-}
-
-.nav__link{
-    align-self: baseline;
-} */

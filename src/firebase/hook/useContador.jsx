@@ -1,25 +1,18 @@
 import { useState } from 'react'
 
-//Agregar HOOK para itemCount
-
-//------------------Esto no va en la carpeta firebase--------------------//
-
-
-//Se importa asi en ItemCount
-// const {sumar, restar, reset} = useContador
 
 const useContador = () => {
     
-    const [contador, setContador] = useState(0)
+    const [count, setCount] = useState(1)
 
-    const sumar = () => setContador(contador + 1)
-    const restar = () => setContador(contador - 1)
-    const reset =  () => setContador(0)
+    const increase = () => setCount(count + 1)
+    const decrease = () => setCount(count - 1)
+    const reset =  () => setCount(0)
     
     return {
-        contador,
-        sumar,
-        restar,
+        count,
+        increase,
+        decrease,
         reset
     }
 }
