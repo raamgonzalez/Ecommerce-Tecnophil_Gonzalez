@@ -5,7 +5,6 @@ import { CarritoContext } from '../../context/CarritoContext'
 import './ItemCart.css'
 
 const ItemCart = (item) => {
-	console.log(item)
 
 	const {product:{item:{title, description, price, img, alt,id, offer }, quantity}} = item
     const {borrarProducto} = useContext(CarritoContext)

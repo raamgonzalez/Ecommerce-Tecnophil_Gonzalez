@@ -8,8 +8,7 @@ import './styles/ItemDetailContainer.css'
 const ItemDetailContainer = () => {
 
     const { id } = useParams()
-    const { getProduct} = useFirebase()
-	const { productos } = useFirebase()  
+    const { getProduct, productos} = useFirebase()
 
 
     useEffect(() => {
@@ -18,7 +17,7 @@ const ItemDetailContainer = () => {
         return () => {
             
     }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
     
 
     const filter = id? productos.filter((product) => product.id === id) : null

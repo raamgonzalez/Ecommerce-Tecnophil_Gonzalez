@@ -29,7 +29,7 @@ const getProducts = async () => {
         const prodCol = collection(db,'productos')
         await getDocs(prodCol).then((snapshot) => {
             if(snapshot.size === 0) {
-                console.log('base de datos esta vacio')
+                console.log('Base de datos esta vacio')
             }
             setLoading(false)
             setProductos(snapshot.docs.map((doc) =>  {
@@ -55,6 +55,7 @@ const getProduct =  async (id) => {
     } catch (error) {
         console.log(error)
     }
+
 };
 
 
