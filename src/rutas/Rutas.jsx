@@ -1,17 +1,18 @@
 import React from 'react'
 import {  Route, Routes } from 'react-router-dom'
-import Cart from '../components/CartList/CartList'
-import Error404 from '../components/Global/PageNotFound/Error404'
-import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
 
+import Home from '../views/Home/Home'
+import Category from '../views/Category/Category'
+import Error404 from '../views/Error/Error404'
+import Cart from '../views/Cart/Cart'
+import Product from '../views/Product/Product'
 
 const Rutas = () => {
     return (
             <Routes>
-                <Route path='/' element={<ItemListContainer/>}/>
-                <Route path='/category/:categoria' element={<ItemListContainer/>} />
-                <Route path='/item/detail/:id' element={<ItemDetailContainer/>} />
+                <Route path='/' element={<Home/>}/>
+                <Route path='/category/:categoria' element={<Category/>} />
+                <Route path='/item/detail/:id' element={<Product/>} />
                 <Route path='/cart' element={<Cart/>} />
                 <Route path='*' element={<Error404/>} />
             </Routes>
