@@ -1,0 +1,133 @@
+.link__card{
+    width: 20rem;
+    height: 100%;
+}
+
+.card{
+    margin: 0;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    background-color:  #fffffe;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.card__header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.card__description{
+    margin: 0 auto;
+    place-items: center;
+}
+
+.card_footer{
+    padding: 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    /* margin-bottom: 1rem; */
+}
+
+.card__header{
+    padding: 0;
+}
+
+.card_footer--price{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.box__card{
+    display: block;
+}
+
+.box__card:hover{
+    scale: 1.01;
+    transition: ease-in-out;
+}
+.card__image{
+    border-radius: 50px 10px 50px 10px;
+}
+
+.text__offer{
+    color: #e53170;
+}
+
+
+.btn__cart{
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
+    
+    min-width: 8rem;
+    height: 3rem;
+
+    color: #fffffe;
+    font-weight: 500;
+    background-color: #ff8906;
+    -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    box-shadow: var(--shadow-elevation-low);
+    border-radius: 7px;
+
+}
+
+.btn__cart:hover{
+    transform: scale(1.02);
+    transition: ease-in-out;
+}
+
+
+.btn__cart--offer:hover:after{
+    color: #e53170;
+    content: "!!";
+}
+
+
+.text__offer--price{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.text__offer--item{
+    padding: 0;
+    display: inline-block;
+    color: #a7a9be;
+    font-size: small;
+    text-decoration: line-through;
+}
+
+
+
+.card__stock--container{
+    position: relative;
+    top: 3.72rem;
+    /* background-color: rgb(172, 39, 39); */
+
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #e6a358;
+    border-left: 30px solid #e6a358;
+    border-bottom: 30px solid transparent;
+    border-radius: 20px 0 0 ;
+}
+
+.card__stock{
+    color: #0f0e17;
+    font-size: medium;
+    background-color: transparent;
+    position: relative;
+    top: -1.6rem;
+    left: -1rem;
+}
+

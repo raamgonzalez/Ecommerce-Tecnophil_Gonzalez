@@ -1,0 +1,16 @@
+
+body{
+    /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1600' height='2000' preserveAspectRatio='none' viewBox='0 0 1600 2000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1019%26quot%3b)' fill='none'%3e%3crect width='1600' height='2000' x='0' y='0' fill='rgba(31%2c 41%2c 55%2c 1)'%3e%3c/rect%3e%3cpath d='M1146.91 1477.08L1181.91 1477.08L1181.91 1600.95L1146.91 1600.95z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1067.33 1640.02 a135.29 135.29 0 1 0 270.58 0 a135.29 135.29 0 1 0 -270.58 0z' fill='rgba(182%2c 185%2c 182%2c 1)'%3e%3c/path%3e%3cpath d='M406.07 333.08L483.6 333.08L483.6 410.61L406.07 410.61z' stroke='rgba(182%2c 185%2c 182%2c 1)'%3e%3c/path%3e%3cpath d='M203.24 1843.92a89.51 89.51 0 1 0 70.84 164.4z' fill='rgba(182%2c 185%2c 182%2c 1)'%3e%3c/path%3e%3cpath d='M255.82 1781.43a38.84 38.84 0 1 0-67.85-37.83z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1403.26 581.77a63.25 63.25 0 1 0-111.03-60.63z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M179.52-54.23a92.92 92.92 0 1 0 92.33 161.28z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M140.29 606.08L220.37 606.08L220.37 662.12L140.29 662.12z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M647.61 875.52L726.22 875.52L726.22 953.18L647.61 953.18z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M129.7 830.27L214.16 830.27L214.16 914.73L129.7 914.73z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1130.42 1912.98L1212.61 1912.98L1212.61 1995.17L1130.42 1995.17z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M604.82 942.1L746.17 942.1L746.17 1008.13L604.82 1008.13z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1513.81 1285.93a26.66 26.66 0 1 0 40.58-34.59z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1471.79 1944.99 a126.6 126.6 0 1 0 253.2 0 a126.6 126.6 0 1 0 -253.2 0z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M237.57 1928.67L374.96 1928.67L374.96 1975.47L237.57 1975.47z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M123.94 720.34L283.65 720.34L283.65 880.05L123.94 880.05z' stroke='%23e73635'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1019'%3e%3crect width='1600' height='2000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+    background-color: #0f0e17;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+    margin: auto auto;
+    height: 100vh;
+    width: 80vw;
+}
+
+
