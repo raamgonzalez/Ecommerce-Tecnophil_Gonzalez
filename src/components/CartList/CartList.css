@@ -1,11 +1,19 @@
+.container__cart{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 4rem;
+}
+
 
 .cart__products{
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 2rem;
 }
 

@@ -30,10 +30,6 @@ const CarritoContextProvider = ({children}) => {
         }else{
             setCarrito([...carrito, {...item, quantity}])
         }
-    
-        
-
-
         toast(`Agregaste ${quantity} unidades al carrito`, {
 			position: "bottom-right",
 			autoClose: 2000,
@@ -46,6 +42,10 @@ const CarritoContextProvider = ({children}) => {
 			});
     }
 
+    //Validar que este completo el formulario
+    const validarFormulario = (campos) => {
+        return campos.some((campo) => campo === "")
+    }
 
     //Total Compra
     const totalCompra = () => {
@@ -60,6 +60,7 @@ const CarritoContextProvider = ({children}) => {
         <CarritoContext.Provider value={{
             totalCompra,
             totalProductos,
+            validarFormulario,
             onAddProducto,
             limpiarCarrito, 
             estaEnCarrito, 

@@ -22,7 +22,8 @@ const Cart = (item) => {
     }
 
     return (
-        <>  <div className='flex flex-row justify-start mx-16'>
+        <>  
+            <div className='container__cart'>
                 <section className='flex flex-col'>
                         <div className='cart__title'>
                             <h2 className='cart__title--h2'>Carrito de compras</h2>
@@ -36,7 +37,7 @@ const Cart = (item) => {
                             </p>
                         </div>
                 </section>
-                <Form/>
+                <Form className="orden"/>
             </div>
         </>
     )

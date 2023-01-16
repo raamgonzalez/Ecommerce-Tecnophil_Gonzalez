@@ -1,8 +1,26 @@
+
+.link__cart{
+    width: 15rem;
+    height: fit-content;
+
+}
+
 .cart__container{
     gap: 2rem;
     height: 100%;
     justify-content: center;
     place-items: center;
+}
+
+.card__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card__footer--price{
+    display: flex;
+    flex-direction: column;
 }
 
 .cart__main--title{
@@ -36,7 +54,7 @@
 }
 
 .btn__cart--delete {
-    min-width: 130px;
+    min-width: 70px;
     height: 40px;
     color: #fff;
     padding: 5px 10px;

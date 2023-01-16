@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { collection, doc, getDoc, getDocs } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, getDocs } from 'firebase/firestore'
 import { db } from '../services';
+import Swal from 'sweetalert2'
 
 const useFirebase = () => {
 
@@ -56,6 +57,26 @@ const getProduct =  async (id) => {
 
 };
 
+const getTicket = async({datos}) => {
+    try {
+        const col = collection(db, "ordenes")
+        const order = await addDoc(col, datos)
+        return (
+            setTimeout(() => {
+                Swal.fire({
+                    title: "Genial!",
+                    text: `Su orden es ${order.id}`,
+                    icon: "success",
+                    timerProgressBar: true,
+                })
+            }, 8000));
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+
 
     return {
         loading,
@@ -63,6 +84,7 @@ const getProduct =  async (id) => {
         producto,
         getProducts,
         getProduct,
+        getTicket
     }
 }
 

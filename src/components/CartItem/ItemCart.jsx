@@ -11,7 +11,7 @@ const ItemCart = (item) => {
 
     return (
         <>
-			<div className='link__card'>
+			<div className='link__cart'>
 				<section className='box__card'>
 					<div className='card__quantity flex flex-row'>
 							<h4 className='card__stock'>{quantity}u</h4>
@@ -25,7 +25,7 @@ const ItemCart = (item) => {
 							<div className='card__main items-center mt-2.5 mb-5'>
 								<p className='card__description'>{description}</p>
 							</div>
-							<div className='card_footer flex items-center justify-between'>
+							<div className='card__footer'>
 								<div className='card__footer--price'>
 								{offer===true? <p className='text__offer--item font-bold'>ARS ${price}</p> : <p className='text__price--item font-bold'>ARS ${price}</p>}
 									{/* <p className='text__offer--item font-bold'>Oferta ARS ${price}</p> */}
