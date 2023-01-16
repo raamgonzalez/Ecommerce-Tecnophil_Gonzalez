@@ -69,7 +69,7 @@ const getTicket = async({datos}) => {
                     icon: "success",
                     timerProgressBar: true,
                 })
-            }, 8000));
+            }, 2000));
     } catch (error) {
         console.log(error)
     }

@@ -1,6 +1,6 @@
 
 .link__cart{
-    width: 15rem;
+    width: 10rem;
     height: fit-content;
 
 }
@@ -42,23 +42,35 @@
 
 .card__quantity{
     position: relative;
-    top: 3.72rem;
+    top: 2.5rem;
 
     width: 0;
     height: 0;
-    border-right: 30px solid transparent;
-    border-top: 30px solid #e6a358;
-    border-left: 30px solid #e6a358;
-    border-bottom: 30px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #e6a358;
+    border-left: 20px solid #e6a358;
+    border-bottom: 20px solid transparent;
     border-radius: 20px 0 0 ;
 }
 
+.card__quantity--number{
+    color: #0f0e17;
+    font-size: small;
+    background-color: transparent;
+    position: relative;
+    top: -1rem;
+    left: -0.8rem;
+}
+
 .btn__cart--delete {
-    min-width: 70px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-width: 20px;
+    height: 30px;
+    color: black;
+    padding: 4px 10px;
+    font-weight: 300;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -66,14 +78,20 @@
     outline: none;
     border-radius: 7px;
     border: none;
+    border: #f1f1f1f1 solid 0.1rem;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
-    background: #c9396b;
+    /* background: #dd608c; */
+    background: none;
     z-index: 1;
 }
 
 .btn__cart--delete:hover:after {
     width: 100%;
     left: 0;
+}
+
+.btn__cart--delete:hover{
+    color: aliceblue;
 }
 
 .btn__cart--delete:after {
@@ -86,17 +104,25 @@
     z-index: -1;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
     transition: all 0.3s ease;
-    background-color: #e53170;
+    background-color: #0f0e17;
     right: 0;
 }
 
+.card__title{
+    font-size: 0.9rem;
+}
+
+
+
+
+/*
 .btn__cart--delete:active {
     top: 2px;
 }
 
 .text__offer--quantity{
     font-size: 0.95rem;
-}
+} */
 
 .text__offer--quantity > span{
     color: #e53170;

@@ -6,7 +6,7 @@ import './ItemCart.css'
 
 const ItemCart = (item) => {
 
-	const {product:{item:{title, description, price, img, alt,id, offer }, quantity}} = item
+	const {product:{item:{title, price, img, alt,id, offer }, quantity}} = item
     const {borrarProducto} = useContext(CarritoContext)
 
     return (
@@ -14,17 +14,14 @@ const ItemCart = (item) => {
 			<div className='link__cart'>
 				<section className='box__card'>
 					<div className='card__quantity flex flex-row'>
-							<h4 className='card__stock'>{quantity}u</h4>
+							<h4 className='card__quantity--number'>{quantity}u</h4>
 					</div>  
 					<div className='card'>
 						<img src={img} className='card__image' alt={alt || 'Imagen del producto'}/>
 						<div className='card__header px-6 pb-3 '>
-							<h3 className='text-slate-800 font-bold text-xl tracking-tight'>
+							<h3 className='card__title text-slate-800 font-bold tracking-tight'>
 								{title}
 							</h3>
-							<div className='card__main items-center mt-2.5 mb-5'>
-								<p className='card__description'>{description}</p>
-							</div>
 							<div className='card__footer'>
 								<div className='card__footer--price'>
 								{offer===true? <p className='text__offer--item font-bold'>ARS ${price}</p> : <p className='text__price--item font-bold'>ARS ${price}</p>}

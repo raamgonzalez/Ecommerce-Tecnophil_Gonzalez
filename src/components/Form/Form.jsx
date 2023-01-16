@@ -18,6 +18,7 @@ const Form = ({total, compra}) => {
             apellido: '',
             email: '',
             telefono: '',
+            mensaje: '',
         // total: total,
         // items: compra,
         });
@@ -37,7 +38,7 @@ const Form = ({total, compra}) => {
         const onSubmit = (e) => {
             e.preventDefault();
             console.log("form", formData.nombre)
-            if (validarFormulario([formData.nombre, formData.apellido, formData.mail, formData.telefono])) {
+            if (validarFormulario([formData.nombre, formData.apellido, formData.mail, formData.telefono, formData.mensaje])) {
                 Swal.fire({
                 title: "Oops!",
                 text: "Faltan campos por completar",
@@ -59,7 +60,6 @@ const Form = ({total, compra}) => {
         };
     
 
-
     // const handleBlur = (e) => {
     //     const { name, value } = e.target;
     //     if (value === "") {
@@ -68,51 +68,12 @@ const Form = ({total, compra}) => {
     //     }
     //     setError({});
     // };
-
-    // //-------------------REVISAR------------
-
-    // return (
-    //     <form  onSubmit={onSubmit} className="container border">
-    //         <h3 className="text-uppercase text-center my-4">Datos del comprador</h3>
-    //         {Object.keys(form.comprador).map((key,index) => (
-    //             <Input
-    //             key={index}
-    //             className="mb-3"
-    //             type="text"
-    //             name={`${key}`}
-    //             value={key.value}
-    //             onChange={handleChange}
-    //             onBlur={handleBlur}
-    //             inputClassName={`form-control ${error[key] && "is-invalid"}`}
-    //             placeholder={`${key}`}
-    //             error={error}
-    //             />
-    //         ))}
-    //         <div className="flex flex-col gap-8">
-    //             <div className="col-12 col-lg-9">
-    //                 <p className="fs-4 text-uppercase">total</p>
-    //             </div>
-    //             <div className="col-12 col-lg-3">
-    //                 <p className="fs-4">${total}</p>
-    //             </div>
-    //             <button
-    //             type="submit"
-    //             className="btn btn-primary text-uppercase w-100 my-4"
-    //             >
-    //             terminar la compra
-    //             </button>
-    //         </div>
-
-    //         <Link to="/" className="btn btn-secondary text-uppercase my-2 w-100">
-    //             volver a comprar
-    //         </Link>
-    //     </form>
+    
     return (
     <>
-        
         <form className='form__cart' onSubmit={onSubmit}>
-        <h4>Formulario de compra</h4>
             <input
+                className='form__text'
                 type="text"
                 name="nombre"
                 placeholder="Nombre"
@@ -120,6 +81,7 @@ const Form = ({total, compra}) => {
                 onChange={handleChange}
             />
             <input
+                className='form__text'
                 type="text"
                 name="apellido"
                 placeholder="Apellido"
@@ -127,6 +89,7 @@ const Form = ({total, compra}) => {
                 onChange={handleChange}
             />
             <input
+                className='form__text'
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -134,14 +97,23 @@ const Form = ({total, compra}) => {
                 onChange={handleChange}
             />
             <input
+                className='form__text'
                 type="text"
                 name="telefono"
                 placeholder="Telefono"
                 value={formData.telefono}
                 onChange={handleChange}
             />
+            <textarea
+                className='form__text'
+                type="text"
+                name="mensaje"
+                placeholder="Escriba su mensaje"
+                value={formData.mensaje}
+                onChange={handleChange}
+            />
             <button className='btn__cart' type="submit">Terminar compra</button>
-            <Link to="/" className="btn btn-secondary text-uppercase my-2 w-100">Volver a comprar</Link>
+            <Link to="/" className="btn__volver">Volver a comprar</Link>
         </form>
     </>
     );

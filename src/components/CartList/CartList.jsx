@@ -31,13 +31,18 @@ const Cart = (item) => {
                         <div className='cart__products'>
                             {carrito.map((product) => <ItemCart id={product.id} product={product}/>)}
                         </div>
-                        <div className='cart__total'>
+
+                </section>
+                <section className='container__form'>
+                    <h4 className='form__text--title'>Formulario de compra</h4>
+                    <div className='cart__total'>
                             <p className='cart__total--p'>
                                 Total compra  <span>$ARS {totalCompra()}</span>
                             </p>
-                        </div>
+                    </div>
+                    <Form/>
+
                 </section>
-                <Form className="orden"/>
             </div>
         </>
     )
