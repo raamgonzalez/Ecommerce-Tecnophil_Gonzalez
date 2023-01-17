@@ -46,7 +46,7 @@
 .detail__title{
     display: inline-block;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: clamp(0.3rem,3vh,2.5rem);
     color: #fffffe;
 
     place-items: center;
@@ -57,6 +57,7 @@
 .detail__category{
     margin-left: 5rem;
 }
+
 
 .detail__body>h3{
     letter-spacing: 1px;
@@ -150,4 +151,26 @@
 
 .detail__icon{
     color:#803750;
+}
+
+
+@media (max-width: 768px) {
+    .detail__box{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .detail__volver{
+        color: #0f0e17;
+        font-size: 1.5rem;
+        position: relative;
+        top: 2.2rem;
+        left: 0.5rem;
+    }
+    
+    .detail__icon{
+        color:#803750;
+    }
+
 }

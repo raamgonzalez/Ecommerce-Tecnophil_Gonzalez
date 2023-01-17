@@ -15,7 +15,7 @@ const { id, title, description, price, img, stock, offer } = props;
 			<div className='card'>
 				<img src={img} className='card__image' alt={title || 'Imagen del producto'}/>
 				<div className='card__header px-6 pb-3 '>
-					<h3 className='text-slate-800 font-bold text-xl tracking-tight'>
+					<h3 className='card__title--item text-slate-800'>
 						{title}
 					</h3>
 					<div className='card__main items-center mt-2.5 mb-5'>

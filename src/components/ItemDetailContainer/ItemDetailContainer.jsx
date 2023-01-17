@@ -3,12 +3,13 @@ import { useEffect } from 'react';
 import {  useParams } from 'react-router-dom'
 import useFirebase from '../../hooks/useFirebase'
 import ItemDetail from '../ItemDetail/ItemDetail'
+import Spinner from '../Spinner/Spinner';
 import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
 
     const { id } = useParams()
-    const { getProduct, productos} = useFirebase()
+    const { getProduct, productos, loading} = useFirebase()
 
 
     useEffect(() => {
@@ -24,23 +25,27 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            {filter.map(({id, title, stock, description, descriptiondetail, category, price, offer, img}, index) => (
-                <div className='products_detail'>
-                    <ItemDetail
-                    key={index}
-                    id={id}
-                    title={title} 
-                    descriptiondetail={descriptiondetail}
-                    description={description}
-                    price={price}
-                    img={img}
-                    offer={offer}
-                    category={category}
-                    stock={stock}
-                    />
-                </div>
-            ))}
+            <section className='products__container'>
+                {loading && <Spinner/>}
+                {filter.map(({id, title, stock, description, descriptiondetail, category, price, offer, img}, index) => (
+                    <div className='products__detail'>
+                        <ItemDetail
+                        key={index}
+                        id={id}
+                        title={title} 
+                        descriptiondetail={descriptiondetail}
+                        description={description}
+                        price={price}
+                        img={img}
+                        offer={offer}
+                        category={category}
+                        stock={stock}
+                        />
+                    </div>
+                ))}
+            </section>
         </>
+        
     )
 }
 

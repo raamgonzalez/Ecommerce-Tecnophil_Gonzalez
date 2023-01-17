@@ -16,8 +16,8 @@ const ItemList = () => {
     return ( 
     <section className='products'>
         {productos.length < 1}
+        {loading && <Spinner/>}
         <div className="products__container">
-            {loading && <Spinner/>}
             { !loading &&  productos.length > 0 ? filter.map(({id, title, description, price, offer, img, alt, stock},index) => (
                 <Item
                 id={id}

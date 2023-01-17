@@ -7,7 +7,6 @@
     gap: 5rem
 }
 
-
 .cart__products{ 
     display: flex;
     flex-direction: row;
@@ -32,7 +31,6 @@
     justify-content: center;
 }
 
-
 .cart__total--p{
     display: flex;
     gap: 0.5rem;
@@ -48,10 +46,6 @@
     color: #e53170;
 }
 
-/* .container__form{
-    margin: auto 0;
-} */
-
 .form__text--title{
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
