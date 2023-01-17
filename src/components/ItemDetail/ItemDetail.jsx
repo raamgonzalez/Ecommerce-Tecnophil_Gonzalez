@@ -23,10 +23,10 @@ const ItemDetail = (item) => {
 							<h3>{title}</h3>
 							<span className='detail__category'>{<Categorias category={category} />}</span>
 						</li>
-						<li className='detail__body'>
-							<p className=''>{description}</p><br/>
-							<h3 className='tracking-tighter'>Descripción</h3>
-							<p>{descriptiondetail}</p>
+						<li className='detail__body body'>
+							<p className='body__description'>{description}</p><br/>
+							<h3 className='body__h3'>Descripción</h3>
+							<p className='body__descriptiondetail'>{descriptiondetail}</p>
 						</li>
 						<li className='detail__price'>
 							<p className='text__offer_price'>ARS ${Math.round(price/1.10)}</p>
