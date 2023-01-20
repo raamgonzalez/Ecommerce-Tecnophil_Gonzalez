@@ -9,8 +9,8 @@
     place-items: center;
 
     .empty__title{
-        font-size: 2em;
-        color: aliceblue;
+        font-size: clamp(1em, 3vw, 2.5em);
+        color: $secondary;
     }
 }
 
@@ -25,7 +25,6 @@
 
     .cart__main{
         width: 100%;
-        height: 100%;
 
         display: flex;
         flex-direction: column;
@@ -86,24 +85,3 @@
 
     }
 }
-
-
-// .form__text--title{
-//     margin-bottom: 2rem;
-// }
-
-// .text__price--item{
-//     padding: 0;
-//     display: inline-block;
-//     color: $paragraph;
-//     font-size: small;
-// }
-
-
-
-
-// .detail__category{
-//     align-self: center;
-//     margin: 2rem 0;
-//     font-size: 1rem;
-// }

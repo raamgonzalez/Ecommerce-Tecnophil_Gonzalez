@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 768px) {
 
 
     .wrapper{
@@ -40,8 +40,6 @@
         }
     }
 
-
-
     .detail__itemcount{
         margin: 0 auto;
         width: 100%;
@@ -52,56 +50,83 @@
 
             padding: 0;
             margin: 0 auto;
+            margin-top: 3em;
             gap: 1em;
-            // width: 100%;
+            width: 100%;
     
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-around;
+            place-items: center;
+
 
             .detail__contador{
-                width: clamp(5em, 15vh, 10em);
+                margin: 0;
+                width: 8em;
+
+                .counter__b{
+                    width: 1em;
+                }
+            }
+        }
+
+        .cart__buttons{
+            margin: 0;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+            gap: 1em;
+
+            .btn__cart--count{
+                width: 2em;
             }
 
-            
-
+            .btn__checkout{
+                width: 2em;
+            }
         }
-        
-    }
-
-
-
-    .detail__button{
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-    }
-
-
-    
-
-
-}
-
-
-@media (max-width:375px) {
-
-    .detail__itemcount{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap:0;
-    }
-
-    
-    .detail__count{
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
 }
+
+
+// @media (max-width:375px) {
+
+//     .detail__itemcount{
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         gap:0;
+//     }
+
+    
+//     .detail__count{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//     }
+
+//     .cart__buttons{
+//         margin: 0 auto;
+//         margin-top: 1em;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-around;
+//         place-items: center;
+//         gap: 1em;
+
+//         .btn__cart--count{
+//             max-width: 5em;
+//         }
+
+//         .btn__checkout{
+//             min-width: 8em;
+//         }
+//     }
+
+// }
 
 // @media (max-width: 375px) {
 

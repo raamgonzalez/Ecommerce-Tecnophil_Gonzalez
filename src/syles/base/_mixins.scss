@@ -3,9 +3,10 @@
     flex-direction: row;
     place-items: center;
     justify-content: center;
+    gap: 0;
     
-    min-width: 8rem;
-    height: 3rem;
+    min-width: 8em;
+    height: 3em;
 
     color: $secondary;
     font-weight: 500;

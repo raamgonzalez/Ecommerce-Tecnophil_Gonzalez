@@ -3,6 +3,7 @@
 @import './settings';
 
 #root{
+  height: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, ul, span{
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
