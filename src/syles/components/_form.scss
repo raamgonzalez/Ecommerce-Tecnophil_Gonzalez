@@ -1,0 +1,47 @@
+.form__cart{
+    width: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1rem;
+
+    .form__text{
+        padding: 5px;
+        font-size: 1em;
+        border-radius: 3px;
+    }
+
+}
+
+.btn__volver{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    min-width: 8rem;
+    height: 3rem;
+    color: $secondary;
+
+
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+
+// .form__text--title{
+//     text-align: center;
+//     display: block;
+//     color: aliceblue;
+//     font-size: x-large;
+// }
+
+
+
+
+

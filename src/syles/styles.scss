@@ -1,0 +1,40 @@
+//Tailwindcss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+//Root
+
+@import './base/reset';
+
+
+// UI Settings.
+
+@import './base/mixins';
+@import './base/settings';
+
+// Components.
+
+@import './components/layout';
+@import './components/footer';
+@import './components/navbar';
+@import './components/itemdetail';
+@import './components/itemdetailcontainer';
+@import './components/item';
+@import './components/itemlist';
+@import './components/itemcount';
+@import './components/itemcart';
+@import './components/cartlist';    
+@import './components/form';
+@import './components/cartwidget';
+@import './components/spinner';
+
+
+// Screens.
+
+@import './screens/home';
+@import './screens/product';
+@import './screens/cart';
+@import './screens/category';
+@import './screens/error';

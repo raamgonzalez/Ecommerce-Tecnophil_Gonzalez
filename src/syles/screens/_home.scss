@@ -1,0 +1,36 @@
+@media (max-width: 375px) {
+
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+
+        .navbar__brand{
+            display: none;
+        }
+
+        .navbar__list{
+            margin: 0 auto;
+            text-align: center;
+            align-self: center;
+    
+            display: flex;
+            flex-direction: row;
+            place-items: center;
+            justify-content: flex-end;
+            gap: 0.1em;
+    
+    
+            .navbar__link{
+                margin: 1em;
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    
+    // .navbar__brand{
+    //         display: none;
+    //     }
+}

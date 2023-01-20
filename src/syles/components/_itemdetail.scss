@@ -1,0 +1,118 @@
+.detail__box{
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    .detail__volver--link{
+        height: fit-content;
+        font-size: 1.5rem;
+        position: relative;
+        top: 0rem;
+        left: 1.7rem;
+    }
+
+    .detail__img{
+        width: 30rem;
+        /* min-height: fit-content;  */
+        border-radius: 1rem;
+        box-shadow: var(--shadow-elevation-medium)
+    }
+}
+
+
+.detail__description{
+    margin: 1rem 0;
+    margin-left: 4rem;
+
+    border-radius: 1rem;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .description__main{
+        margin: 0 auto;
+
+        color: $paragraph;
+        width: 100%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
+
+.detail__title{
+    margin: 0;
+    margin-bottom: 0.7em;
+
+    font-weight: bold;
+    font-size: clamp(0.3rem,3vh,2.5rem);
+    color: $secondary;
+
+    place-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .detail__category{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+.detail__body{
+
+    & h3{
+        margin: 0.5em 0;
+
+        letter-spacing: 1px;
+        text-decoration: underline;
+        color: #fffffe;
+    }
+    
+    .detail__body>p{
+        margin-left: 2rem;
+    }
+
+    .body__descriptiondetail{
+        margin: 0 auto;
+        font-size: clamp(0.5rem,1.9vh,5rem);
+    }
+}
+
+.detail__price{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: clamp(0.5rem,3.5vh,5rem);
+    color: $secondary;
+    align-self: center;
+
+    .text__offer_price{
+        margin: 0 2rem;
+    }
+
+    .text__offer--detail{
+        padding: 0 2rem;
+        align-self: center;
+        color: $paragraph;
+        font-size: x-large;
+        text-decoration: line-through;
+        border-left: 1px solid #f25f4c;
+    }
+}
+
+
+
+
+
+
+
+
+

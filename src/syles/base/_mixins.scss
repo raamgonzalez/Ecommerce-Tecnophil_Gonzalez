@@ -1,0 +1,24 @@
+@mixin btn__primary{
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
+    
+    min-width: 8rem;
+    height: 3rem;
+
+    color: $secondary;
+    font-weight: 500;
+    background-color: $btn;
+    -webkit-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 9px 24px -3px rgba(0,0,0,0.46);
+    box-shadow: var(--shadow-elevation-low);
+    border-radius: 7px;
+}
+
+@mixin text__price{
+    padding: 0;
+    display: inline-block;
+    color: #a7a9be;
+    font-size: small;
+}

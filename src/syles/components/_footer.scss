@@ -1,0 +1,39 @@
+
+.footer{
+    padding: 1em;
+    border-top: 1px solid $paragraph;
+
+    .footer__main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .footer__logo{
+            display: flex;
+            flex-direction: column;
+
+            .footer__logo--img{
+                align-self: start;
+                max-width: 8em;
+                max-height: 3em;
+            }
+
+            .footer__h3{
+                color: $secondary;
+            }
+        }
+
+        .footer__links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.25em;
+
+            .footer__a{
+                color: $secondary;
+                text-decoration: none;
+                font-size: 1.25em;  
+            }
+        }
+    }
+}

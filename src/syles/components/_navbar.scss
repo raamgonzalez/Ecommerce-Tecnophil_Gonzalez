@@ -1,0 +1,40 @@
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $paragraph;
+
+    .navbar__img{
+        max-width: 8rem;
+        max-height: 4rem;
+    }
+
+    .navbar__list{
+        margin: auto 0;
+        
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        place-items: baseline;
+
+        .navbar__link{
+            padding: 0.5em 0;
+            color: $secondary;
+            font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+        
+            .active{
+                font-weight: lighter;
+                color: $btn;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//navbar flex flex-row justify-between w-full border-b border-gray-400
+

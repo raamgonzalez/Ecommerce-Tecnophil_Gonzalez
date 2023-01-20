@@ -1,0 +1,121 @@
+
+.link__cart{
+    width: 10rem;
+    height: fit-content;
+}
+
+.cart__quantity{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 2.5rem;
+
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #e6a358;
+    border-left: 20px solid #e6a358;
+    border-bottom: 20px solid transparent;
+    border-radius: 20px 0 0 ;
+
+    .cart__quantity--number{
+        color: $main;
+        font-size: 0.8em;
+        background-color: transparent;
+        position: relative;
+        top: -1rem;
+        left: -0.8rem;
+    }
+}
+
+.cart__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 0.5em;
+
+    .cart__title{
+        font-size: 0.9em;
+    }
+}
+
+
+.cart__footer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 0.5em;
+
+    .cart__footer--price{
+        font-size: 0.9em;
+
+        .text__price--item{
+            @include text__price
+        }
+
+        .text__offer--item{
+            @include text__price
+        }
+    }
+}
+
+.cart__footer--price{
+
+    .text__offer--quantity > span{
+        color: #e53170;
+    }
+}
+
+
+.btn__cart--delete {
+    padding: 0.2em 2em;
+
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    min-width: 20px;
+    height: 30px;
+
+    color: black;
+
+    font-weight: 300;
+    cursor: pointer;
+
+
+    transition: all 0.3s ease;
+    position: relative;
+    
+
+
+    border: $secondary solid 0.1rem;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: none;
+    z-index: 1;
+
+    &:hover{
+        color: $secondary;
+    }
+    &:hover:after{
+        width: 100%;
+        left: 0
+    }
+
+    &:after{
+        border-radius: 7px;
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        transition: all 0.3s ease;
+        background-color: #0f0e17;
+        right: 0;
+    }
+
+}

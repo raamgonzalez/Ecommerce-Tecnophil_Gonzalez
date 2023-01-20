@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
+import ItemListContainer from '../../components/ItemListContainer'
 
 const Category = () => {
 
