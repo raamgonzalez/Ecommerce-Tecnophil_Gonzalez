@@ -30,6 +30,6 @@ React
 
 Open [http://localhost:3000](http://localhost:3000/) to view it in your browser.
 
-### Frameworks
+## Frameworks
 - SASS : Se utilizo para estilar de forma mas dinamica y en bloques.
 - TAILWINDCSS : Se utilizo para hacer un bocetado de la web.
