@@ -50,16 +50,6 @@ const Form = ({total, compra}) => {
             limpiarCarrito();
         };
     
-
-    // const handleBlur = (e) => {
-    //     const { name, value } = e.target;
-    //     if (value === "") {
-    //         setError({ ...error, [name]: "Este campo es obligatorio" });
-    //         return;
-    //     }
-    //     setError({});
-    // };
-    
     return (
     <>
         <form className='form__cart' onSubmit={onSubmit}>
@@ -105,6 +95,7 @@ const Form = ({total, compra}) => {
             />
             <button className='btn__cart' type="submit">Terminar compra</button>
             <Link to="/" className="btn__volver">Volver a comprar</Link>
+            <button className='btn__volver' onClick={() => limpiarCarrito()}>Vaciar el carrito </button>
         </form>
     </>
     );

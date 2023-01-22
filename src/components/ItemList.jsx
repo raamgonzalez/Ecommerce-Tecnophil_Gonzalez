@@ -21,7 +21,7 @@ const ItemList = () => {
             { !loading &&  productos.length > 0 ? filter.map(({id, title, description, price, offer, img, alt, stock},index) => (
                 <Item
                 id={id}
-                key={index}
+                key={id}
                 title={title} 
                 description={description} 
                 price={price}

@@ -19,7 +19,8 @@
 
 @mixin text__price{
     padding: 0;
-    display: inline-block;
+    display: block;
+    // display: inline-block;
     color: #a7a9be;
     font-size: small;
 }

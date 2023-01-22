@@ -47,10 +47,11 @@
     flex-direction: column;
     justify-content: center;
     place-items: center;
-    gap: 0.5em;
+    gap: 0.1em;
 
     .cart__footer--price{
         font-size: 0.9em;
+        margin-bottom: 1em;
 
         .text__price--item{
             @include text__price
